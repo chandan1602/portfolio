@@ -113,3 +113,110 @@ html.transition *:after {
     transition-delay: 0 !important;
 }
 
+.companyHead {
+    font-size: 1.5rem;
+    padding: 20px 0px;
+}
+
+
+.timelineWork {
+    position: relative;
+    border-left: 1px solid #000;
+}
+
+.timelineWork::before, .timelineWork::after {
+    content: "";
+    position: absolute;
+    color: #000;
+    margin-left: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.timelineWork::after {
+    bottom: 0;
+}
+
+.timelineWork.mayandco::before {
+    content: "Aug-2021"
+}
+
+/* .timelineWork.mayandco::after {
+    content: "July-2021"
+} */
+
+.timelineWork.kohler::before {
+    content: "July-2021"
+}
+
+.timelineWork.kohler::after {
+    content: "June-2021"
+}
+
+.timelineWork.transmate::before {
+    content: "June-2020"
+}
+
+.timelineWork.transmate::after {
+    content: "Dec-2020"
+}
+
+.timelineWork.platformtechs::before {
+    content: "Feb-2019"
+}
+
+.timelineWork.platformtechs::after {
+    content: "April-2019"
+}
+
+
+
+.workSamples {
+    padding: 50px 0vw 50px 10vw;
+}
+
+.workSamples a {
+    text-decoration: none;
+    color: var(--colorx);
+    font-weight: 600;
+    position: relative;
+}
+
+.workSamples a::after {
+    content: url("./../img/external-link-24.png");
+    padding-left: 5px;
+    position: absolute;
+}
+
+.wsImgDiv {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+    .wsImgDiv {
+        display: none;
+    }
+}
+
+.wsImgDiv img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+#footer {
+    background-color: #000;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10vw;
+}
+
+.footerLeft {
+    color: #fff;
+
+}
