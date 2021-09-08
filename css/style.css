@@ -26,6 +26,10 @@ html[data-theme='lighttheme'] {
     --cardBackg: #fff;
 }
 
+p {
+    color: var(--colorx);
+}
+
 .content {
     background-color: var(--backg);
     color: var(--colorx);
@@ -127,7 +131,7 @@ html.transition *:after {
 .timelineWork::before, .timelineWork::after {
     content: "";
     position: absolute;
-    color: #000;
+    color: var(--colorx);
     margin-left: 5px;
     font-size: 0.8rem;
     font-weight: 600;
@@ -200,6 +204,14 @@ html.transition *:after {
     }
 }
 
+.sprtrBkg {
+    background-color: var(--backg);
+}
+
+.keyframe {
+    box-shadow: 0px 5px 2px -2px var(--colorx);
+}
+
 .wsImgDiv img {
     width: 100%;
     height: auto;
@@ -219,4 +231,8 @@ html.transition *:after {
 .footerLeft {
     color: #fff;
 
+}
+
+.modalText {
+    color: #000 !important;
 }

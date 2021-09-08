@@ -121,7 +121,7 @@
 
         <section id="seperator">
             <div class="container">
-                <div class="jumbotron" style="background-color: #fff !important;">
+                <div class="jumbotron sprtrBkg">
                     <section class="at_rule">
                         <div class="keyframe commonContainer">
                             <div class="keyframeInner">
@@ -296,7 +296,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#5" type="button" data-toggle="modal" data-target="#exampleModal">
+                        <a href="#modal" type="button" data-toggle="modal" data-target="#exampleModal">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -313,15 +313,17 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Info</h5>
+                        <h5 class="modal-title modalText" id="exampleModalLabel">Info</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        Name: Chandan Bansal<br>
-                        Contact: +91 76963-94019<br>
-                        Email: cbansal82@gmail.com
+                        <p class="modalText">
+                            Name: Chandan Bansal<br>
+                            Contact: +91 76963-94019<br>
+                            Email: cbansal82@gmail.com
+                        </p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -347,7 +349,7 @@
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     </style>
-    <script src="./js/index.js" type="text/Javascript"></script>
+    <script defer src="./js/index.js" type="text/Javascript"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
         </script>
