@@ -132,9 +132,9 @@ html.transition *:after {
     content: "";
     position: absolute;
     color: var(--colorx);
-    margin-left: 5px;
     font-size: 0.8rem;
     font-weight: 600;
+    margin-left: 5px;
 }
 
 .timelineWork::after {
@@ -142,35 +142,32 @@ html.transition *:after {
 }
 
 .timelineWork.mayandco::before {
-    content: "Aug-2021"
+    content: "Aug-2021";
 }
-
 /* .timelineWork.mayandco::after {
     content: "July-2021"
 } */
 
 .timelineWork.kohler::before {
-    content: "July-2021"
+    content: "July-2021";
 }
-
 .timelineWork.kohler::after {
-    content: "June-2021"
+    content: "June-2021";
 }
 
 .timelineWork.transmate::before {
-    content: "June-2020"
+    content: "Dec-2020";
 }
-
 .timelineWork.transmate::after {
-    content: "Dec-2020"
+    content: "June-2020";
+    margin-bottom: 20px;
 }
 
 .timelineWork.platformtechs::before {
-    content: "Feb-2019"
+    content: "April-2019";
 }
-
 .timelineWork.platformtechs::after {
-    content: "April-2019"
+    content: "Feb-2019";
 }
 
 
