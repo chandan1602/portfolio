@@ -125,7 +125,7 @@ html.transition *:after {
 
 .timelineWork {
     position: relative;
-    border-left: 1px solid #000;
+    border-left: 1px solid var(--colorx);
 }
 
 .timelineWork::before, .timelineWork::after {
