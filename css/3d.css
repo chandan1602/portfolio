@@ -143,6 +143,7 @@
     box-shadow: -1px 1px 1px rgba(121, 11, 11, 0.05);
 }
 
+
 #footer ul li:hover span:nth-child(5) {
     transform: translate(40px, -40px);
     opacity: 1;
@@ -186,6 +187,15 @@
 #footer ul li:nth-child(3):hover span {
     background: #3b5999;
 }
-#footer ul li:nth-child(4):hover span {
-    background: #0077B5;
+
+
+.infoIcon {
+    position: absolute;
+    padding: 20px;
+    border: 3px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+}
+
+#footer ul li:hover .infoIcon {
+    border-color: rgba(255,255,255,1);
 }
