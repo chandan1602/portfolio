@@ -1,7 +1,7 @@
 import axios from "axios";
 import {dummyData} from "./dummy/index";
 
-const Axios = axios.create({ baseURL: process.env.SERVER_URL });
+const Axios = axios.create({ baseURL: process.env.DEV_URL });
 
 Axios.interceptors.response.use(
   (response) => {
