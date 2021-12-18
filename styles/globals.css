@@ -43,13 +43,21 @@ html[data-theme='lighttheme'] {
     --cardBackg: #fff;
 }
 
-p {
+p, h5, .markupP {
     color: var(--colorx);
 }
 
 img {
   width: 100%;
   height: auto;
+}
+
+.blog a {
+  color: var(--colorx);
+}
+
+.cB {
+  background-color: var(--backg);
 }
 
 .content {
