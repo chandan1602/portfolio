@@ -1,321 +1,122 @@
-"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 888;
-exports.ids = [888];
+exports.id = "pages/_app";
+exports.ids = ["pages/_app"];
 exports.modules = {
 
-/***/ 324:
+/***/ "./components/Header.js":
+/*!******************************!*\
+  !*** ./components/Header.js ***!
+  \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Header\": () => (/* binding */ Header)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst Header = ()=>{\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"div\", {\n        __source: {\n            fileName: \"/home/chandan/projects/personal/portfolio/components/Header.js\",\n            lineNumber: 5,\n            columnNumber: 9\n        },\n        __self: undefined,\n        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"p\", {\n            __source: {\n                fileName: \"/home/chandan/projects/personal/portfolio/components/Header.js\",\n                lineNumber: 6,\n                columnNumber: 13\n            },\n            __self: undefined,\n            children: \"Header\"\n        })\n    }));\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0hlYWRlci5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBeUI7QUFFbEIsS0FBSyxDQUFDQyxNQUFNLE9BQVMsQ0FBQztJQUN6QixNQUFNLHNFQUNEQyxDQUFHOzs7Ozs7O3VGQUNDQyxDQUFDOzs7Ozs7O3NCQUFDLENBQU07OztBQUdyQixDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcG9ydGZvbGlvLy4vY29tcG9uZW50cy9IZWFkZXIuanM/NGRiYiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnXG5cbmV4cG9ydCBjb25zdCBIZWFkZXIgPSAoKSA9PiB7XG4gICAgcmV0dXJuIChcbiAgICAgICAgPGRpdj5cbiAgICAgICAgICAgIDxwPkhlYWRlcjwvcD5cbiAgICAgICAgPC9kaXY+XG4gICAgKVxufVxuIl0sIm5hbWVzIjpbIlJlYWN0IiwiSGVhZGVyIiwiZGl2IiwicCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/Header.js\n");
 
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ _app)
-});
+/***/ }),
 
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(997);
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(689);
-;// CONCATENATED MODULE: ./components/Header.js
+/***/ "./components/Layout.js":
+/*!******************************!*\
+  !*** ./components/Layout.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Layout\": () => (/* binding */ Layout)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ \"./components/Header.js\");\n/* harmony import */ var _Meta__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Meta */ \"./components/Meta.js\");\n/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Nav */ \"./components/Nav.js\");\n\n\n\n\nconst Layout = ({ children  })=>{\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"div\", {\n        __source: {\n            fileName: \"/home/chandan/projects/personal/portfolio/components/Layout.js\",\n            lineNumber: 7,\n            columnNumber: 9\n        },\n        __self: undefined,\n        children: [\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_Meta__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n                __source: {\n                    fileName: \"/home/chandan/projects/personal/portfolio/components/Layout.js\",\n                    lineNumber: 8,\n                    columnNumber: 12\n                },\n                __self: undefined\n            }),\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_Nav__WEBPACK_IMPORTED_MODULE_3__.Nav, {\n                __source: {\n                    fileName: \"/home/chandan/projects/personal/portfolio/components/Layout.js\",\n                    lineNumber: 9,\n                    columnNumber: 12\n                },\n                __self: undefined\n            }),\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"div\", {\n                __source: {\n                    fileName: \"/home/chandan/projects/personal/portfolio/components/Layout.js\",\n                    lineNumber: 10,\n                    columnNumber: 12\n                },\n                __self: undefined,\n                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"main\", {\n                    __source: {\n                        fileName: \"/home/chandan/projects/personal/portfolio/components/Layout.js\",\n                        lineNumber: 11,\n                        columnNumber: 16\n                    },\n                    __self: undefined,\n                    children: children\n                })\n            }),\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"script\", {\n                src: \"https://code.jquery.com/jquery-3.4.1.slim.min.js\",\n                integrity: \"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\",\n                crossOrigin: \"anonymous\",\n                __source: {\n                    fileName: \"/home/chandan/projects/personal/portfolio/components/Layout.js\",\n                    lineNumber: 15,\n                    columnNumber: 12\n                },\n                __self: undefined\n            }),\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"script\", {\n                src: \"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\",\n                integrity: \"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\",\n                crossOrigin: \"anonymous\",\n                __source: {\n                    fileName: \"/home/chandan/projects/personal/portfolio/components/Layout.js\",\n                    lineNumber: 17,\n                    columnNumber: 9\n                },\n                __self: undefined\n            }),\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"script\", {\n                src: \"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\",\n                integrity: \"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\",\n                crossOrigin: \"anonymous\",\n                __source: {\n                    fileName: \"/home/chandan/projects/personal/portfolio/components/Layout.js\",\n                    lineNumber: 20,\n                    columnNumber: 9\n                },\n                __self: undefined\n            })\n        ]\n    }));\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0xheW91dC5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQWlDO0FBQ1I7QUFDRTtBQUVwQixLQUFLLENBQUNHLE1BQU0sSUFBSSxDQUFDQyxDQUFBQSxRQUFRLEdBQUMsR0FBSyxDQUFDO0lBQ25DLE1BQU0sdUVBQ0RDLENBQUc7Ozs7Ozs7O2lGQUNBSiw2Q0FBSTs7Ozs7Ozs7aUZBQ0pDLHFDQUFHOzs7Ozs7OztpRkFDSEcsQ0FBRzs7Ozs7OzsrRkFDQ0MsQ0FBSTs7Ozs7Ozs4QkFDQUYsUUFBUTs7O2lGQUdoQkcsQ0FBTTtnQkFBQ0MsR0FBRyxFQUFDLENBQWtEO2dCQUMvREMsU0FBUyxFQUFDLENBQXlFO2dCQUFDQyxXQUFXLEVBQUMsQ0FBVzs7Ozs7Ozs7aUZBQzVHSCxDQUFNO2dCQUFDQyxHQUFHLEVBQUMsQ0FBc0U7Z0JBQ2hGQyxTQUFTLEVBQUMsQ0FBeUU7Z0JBQUNDLFdBQVcsRUFBQyxDQUFXOzs7Ozs7OztpRkFFNUdILENBQU07Z0JBQUNDLEdBQUcsRUFBQyxDQUF3RTtnQkFDbEZDLFNBQVMsRUFBQyxDQUF5RTtnQkFBQ0MsV0FBVyxFQUFDLENBQVc7Ozs7Ozs7Ozs7QUFJckgsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3BvcnRmb2xpby8uL2NvbXBvbmVudHMvTGF5b3V0LmpzPzUxNWMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgSGVhZGVyIH0gZnJvbSBcIi4vSGVhZGVyXCJcbmltcG9ydCBNZXRhIGZyb20gXCIuL01ldGFcIlxuaW1wb3J0IHsgTmF2IH0gZnJvbSBcIi4vTmF2XCJcblxuZXhwb3J0IGNvbnN0IExheW91dCA9ICh7Y2hpbGRyZW59KSA9PiB7XG4gICAgcmV0dXJuIChcbiAgICAgICAgPGRpdj5cbiAgICAgICAgICAgPE1ldGEgLz4gXG4gICAgICAgICAgIDxOYXYgLz5cbiAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgIDxtYWluPlxuICAgICAgICAgICAgICAgICAgIHtjaGlsZHJlbn1cbiAgICAgICAgICAgICAgIDwvbWFpbj5cbiAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgIDxzY3JpcHQgc3JjPVwiaHR0cHM6Ly9jb2RlLmpxdWVyeS5jb20vanF1ZXJ5LTMuNC4xLnNsaW0ubWluLmpzXCJcbiAgICAgICAgICBpbnRlZ3JpdHk9XCJzaGEzODQtSjZxYTQ4NDlibEUyK3BvVDRXbnlLaHY1dlpGNVNyUG8waUVqd0J2S1U3aW1HRkFWMHd3ajF5WWZvUlNKb1orblwiIGNyb3NzT3JpZ2luPVwiYW5vbnltb3VzXCI+PC9zY3JpcHQ+XG4gICAgICAgIDxzY3JpcHQgc3JjPVwiaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9wb3BwZXIuanNAMS4xNi4wL2Rpc3QvdW1kL3BvcHBlci5taW4uanNcIlxuICAgICAgICAgIGludGVncml0eT1cInNoYTM4NC1RNkU5Ukh2Ykl5WkZKb2Z0KzJtSmJIYUVXbGRsdkk5SU9ZeTVuM3pWOXp6VHRtSTNVa3NkUVJWdm94TWZvb0FvXCIgY3Jvc3NPcmlnaW49XCJhbm9ueW1vdXNcIj5cbiAgICAgICAgPC9zY3JpcHQ+XG4gICAgICAgIDxzY3JpcHQgc3JjPVwiaHR0cHM6Ly9zdGFja3BhdGguYm9vdHN0cmFwY2RuLmNvbS9ib290c3RyYXAvNC40LjEvanMvYm9vdHN0cmFwLm1pbi5qc1wiXG4gICAgICAgICAgaW50ZWdyaXR5PVwic2hhMzg0LXdmU0RGMkU1MFkyRDF1VWRqME8zdU1CSm5qdVVENEloN1l3YVlkMWlxZmt0ajBVb2Q4R0NFeGwzT2c4aWZ3QjZcIiBjcm9zc09yaWdpbj1cImFub255bW91c1wiPlxuICAgICAgICA8L3NjcmlwdD5cbiAgICAgICAgPC9kaXY+XG4gICAgKVxufVxuIl0sIm5hbWVzIjpbIkhlYWRlciIsIk1ldGEiLCJOYXYiLCJMYXlvdXQiLCJjaGlsZHJlbiIsImRpdiIsIm1haW4iLCJzY3JpcHQiLCJzcmMiLCJpbnRlZ3JpdHkiLCJjcm9zc09yaWdpbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/Layout.js\n");
 
-const Header = ()=>{
-    return(/*#__PURE__*/ _jsx("div", {
-        children: /*#__PURE__*/ _jsx("p", {
-            children: "Header"
-        })
-    }));
-};
+/***/ }),
 
-// EXTERNAL MODULE: external "next/head"
-var head_ = __webpack_require__(968);
-var head_default = /*#__PURE__*/__webpack_require__.n(head_);
-;// CONCATENATED MODULE: ./components/Meta.js
+/***/ "./components/Meta.js":
+/*!****************************!*\
+  !*** ./components/Meta.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ \"next/head\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst Meta = ({ title , keywords , description  })=>{\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_1___default()), {\n        __source: {\n            fileName: \"/home/chandan/projects/personal/portfolio/components/Meta.js\",\n            lineNumber: 5,\n            columnNumber: 9\n        },\n        __self: undefined,\n        children: [\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"meta\", {\n                name: \"viewport\",\n                content: \"width=device-width, initial-scale=1\",\n                __source: {\n                    fileName: \"/home/chandan/projects/personal/portfolio/components/Meta.js\",\n                    lineNumber: 6,\n                    columnNumber: 13\n                },\n                __self: undefined\n            }),\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"meta\", {\n                httpEquiv: \"X-UA-Compatible\",\n                content: \"ie=edge\",\n                __source: {\n                    fileName: \"/home/chandan/projects/personal/portfolio/components/Meta.js\",\n                    lineNumber: 7,\n                    columnNumber: 13\n                },\n                __self: undefined\n            }),\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"meta\", {\n                name: \"keywords\",\n                content: keywords,\n                __source: {\n                    fileName: \"/home/chandan/projects/personal/portfolio/components/Meta.js\",\n                    lineNumber: 8,\n                    columnNumber: 13\n                },\n                __self: undefined\n            }),\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"meta\", {\n                name: \"description\",\n                content: description,\n                __source: {\n                    fileName: \"/home/chandan/projects/personal/portfolio/components/Meta.js\",\n                    lineNumber: 9,\n                    columnNumber: 13\n                },\n                __self: undefined\n            }),\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"meta\", {\n                charSet: \"utf-8\",\n                __source: {\n                    fileName: \"/home/chandan/projects/personal/portfolio/components/Meta.js\",\n                    lineNumber: 10,\n                    columnNumber: 13\n                },\n                __self: undefined\n            }),\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"link\", {\n                rel: \"icon\",\n                href: \"/favicon.ico\",\n                __source: {\n                    fileName: \"/home/chandan/projects/personal/portfolio/components/Meta.js\",\n                    lineNumber: 11,\n                    columnNumber: 13\n                },\n                __self: undefined\n            }),\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"title\", {\n                __source: {\n                    fileName: \"/home/chandan/projects/personal/portfolio/components/Meta.js\",\n                    lineNumber: 12,\n                    columnNumber: 13\n                },\n                __self: undefined,\n                children: title\n            })\n        ]\n    }));\n};\nMeta.defaultProps = {\n    title: 'Chandan Bansal',\n    keywords: 'computer engineer, programming, web developer, software engineer',\n    description: 'Get to know the developer'\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Meta);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL01ldGEuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQTRCO0FBRTVCLEtBQUssQ0FBQ0MsSUFBSSxJQUFJLENBQUMsQ0FBQ0MsS0FBSyxHQUFFQyxRQUFRLEdBQUVDLFdBQVcsRUFBQyxDQUFDLEdBQUssQ0FBQztJQUNoRCxNQUFNLHVFQUNESixrREFBSTs7Ozs7Ozs7aUZBQ0FLLENBQUk7Z0JBQUNDLElBQUksRUFBQyxDQUFVO2dCQUFDQyxPQUFPLEVBQUMsQ0FBcUM7Ozs7Ozs7O2lGQUNsRUYsQ0FBSTtnQkFBQ0csU0FBUyxFQUFDLENBQWlCO2dCQUFDRCxPQUFPLEVBQUMsQ0FBUzs7Ozs7Ozs7aUZBQ2xERixDQUFJO2dCQUFDQyxJQUFJLEVBQUMsQ0FBVTtnQkFBQ0MsT0FBTyxFQUFFSixRQUFROzs7Ozs7OztpRkFDdENFLENBQUk7Z0JBQUNDLElBQUksRUFBQyxDQUFhO2dCQUFDQyxPQUFPLEVBQUVILFdBQVc7Ozs7Ozs7O2lGQUM1Q0MsQ0FBSTtnQkFBQ0ksT0FBTyxFQUFDLENBQU87Ozs7Ozs7O2lGQUNwQkMsQ0FBSTtnQkFBQ0MsR0FBRyxFQUFDLENBQU07Z0JBQUNDLElBQUksRUFBQyxDQUFjOzs7Ozs7OztpRkFDbkNWLENBQUs7Ozs7Ozs7MEJBQUVBLEtBQUs7Ozs7QUFHekIsQ0FBQztBQUVERCxJQUFJLENBQUNZLFlBQVksR0FBRyxDQUFDO0lBQ2pCWCxLQUFLLEVBQUUsQ0FBZ0I7SUFDdkJDLFFBQVEsRUFBRSxDQUFrRTtJQUM1RUMsV0FBVyxFQUFFLENBQTJCO0FBQzVDLENBQUM7QUFFRCxpRUFBZUgsSUFBSSIsInNvdXJjZXMiOlsid2VicGFjazovL3BvcnRmb2xpby8uL2NvbXBvbmVudHMvTWV0YS5qcz9lZDk3Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBIZWFkIGZyb20gJ25leHQvaGVhZCdcblxuY29uc3QgTWV0YSA9ICh7IHRpdGxlLCBrZXl3b3JkcywgZGVzY3JpcHRpb24gfSkgPT4ge1xuICAgIHJldHVybiAoXG4gICAgICAgIDxIZWFkPlxuICAgICAgICAgICAgPG1ldGEgbmFtZT0ndmlld3BvcnQnIGNvbnRlbnQ9J3dpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xJyAvPlxuICAgICAgICAgICAgPG1ldGEgaHR0cEVxdWl2PVwiWC1VQS1Db21wYXRpYmxlXCIgY29udGVudD1cImllPWVkZ2VcIiAvPlxuICAgICAgICAgICAgPG1ldGEgbmFtZT0na2V5d29yZHMnIGNvbnRlbnQ9e2tleXdvcmRzfSAvPlxuICAgICAgICAgICAgPG1ldGEgbmFtZT0nZGVzY3JpcHRpb24nIGNvbnRlbnQ9e2Rlc2NyaXB0aW9ufSAvPlxuICAgICAgICAgICAgPG1ldGEgY2hhclNldD0ndXRmLTgnIC8+XG4gICAgICAgICAgICA8bGluayByZWw9J2ljb24nIGhyZWY9Jy9mYXZpY29uLmljbycgLz5cbiAgICAgICAgICAgIDx0aXRsZT57dGl0bGV9PC90aXRsZT5cbiAgICAgICAgPC9IZWFkPlxuICAgIClcbn1cblxuTWV0YS5kZWZhdWx0UHJvcHMgPSB7XG4gICAgdGl0bGU6ICdDaGFuZGFuIEJhbnNhbCcsXG4gICAga2V5d29yZHM6ICdjb21wdXRlciBlbmdpbmVlciwgcHJvZ3JhbW1pbmcsIHdlYiBkZXZlbG9wZXIsIHNvZnR3YXJlIGVuZ2luZWVyJyxcbiAgICBkZXNjcmlwdGlvbjogJ0dldCB0byBrbm93IHRoZSBkZXZlbG9wZXInLFxufVxuXG5leHBvcnQgZGVmYXVsdCBNZXRhXG4iXSwibmFtZXMiOlsiSGVhZCIsIk1ldGEiLCJ0aXRsZSIsImtleXdvcmRzIiwiZGVzY3JpcHRpb24iLCJtZXRhIiwibmFtZSIsImNvbnRlbnQiLCJodHRwRXF1aXYiLCJjaGFyU2V0IiwibGluayIsInJlbCIsImhyZWYiLCJkZWZhdWx0UHJvcHMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/Meta.js\n");
 
-const Meta = ({ title , keywords , description  })=>{
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)((head_default()), {
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
-                name: "viewport",
-                content: "width=device-width, initial-scale=1"
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
-                "http-equiv": "X-UA-Compatible",
-                content: "ie=edge"
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
-                name: "keywords",
-                content: keywords
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
-                name: "description",
-                content: description
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("meta", {
-                charSet: "utf-8"
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("link", {
-                rel: "icon",
-                href: "/favicon.ico"
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("title", {
-                children: title
-            })
-        ]
-    }));
-};
-Meta.defaultProps = {
-    title: 'Chandan Bansal',
-    keywords: 'computer engineer, programming, web developer, software engineer',
-    description: 'Get to know the developer'
-};
-/* harmony default export */ const components_Meta = (Meta);
+/***/ }),
 
-// EXTERNAL MODULE: external "next/router"
-var router_ = __webpack_require__(853);
-;// CONCATENATED MODULE: ./components/Nav.js
+/***/ "./components/Nav.js":
+/*!***************************!*\
+  !*** ./components/Nav.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Nav\": () => (/* binding */ Nav)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/head */ \"next/head\");\n/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ \"next/router\");\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\nconst Nav = ()=>{\n    let trans = ()=>{\n        document.documentElement.classList.add('transition');\n        window.setTimeout(()=>{\n            document.documentElement.classList.remove('transition');\n        }, 0);\n    };\n    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{\n        var checkbox = document.querySelector('input[name=mode]');\n        checkbox.addEventListener('change', function() {\n            if (this.checked) {\n                trans();\n                document.documentElement.setAttribute('data-theme', 'dartheme');\n            } else {\n                trans();\n                document.documentElement.setAttribute('data-theme', 'lighttheme');\n            }\n        });\n    });\n    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)();\n    const redirectToPage = (page)=>{\n        router.push(page);\n    };\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_2___default()), {\n                __source: {\n                    fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                    lineNumber: 32,\n                    columnNumber: 13\n                },\n                __self: undefined,\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"link\", {\n                        rel: \"stylesheet\",\n                        href: \"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\",\n                        __source: {\n                            fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                            lineNumber: 33,\n                            columnNumber: 17\n                        },\n                        __self: undefined\n                    }),\n                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"link\", {\n                        rel: \"stylesheet\",\n                        href: \"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\",\n                        integrity: \"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\",\n                        crossOrigin: \"anonymous\",\n                        __source: {\n                            fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                            lineNumber: 34,\n                            columnNumber: 17\n                        },\n                        __self: undefined\n                    })\n                ]\n            }),\n            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"nav\", {\n                className: \"navbar navbar-expand-lg navbar-dark bg-dark\",\n                style: {\n                    position: \"sticky\",\n                    zIndex: 3\n                },\n                __source: {\n                    fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                    lineNumber: 37,\n                    columnNumber: 13\n                },\n                __self: undefined,\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"a\", {\n                        className: \"navbar-brand\",\n                        \"data-toggle\": \"collapse\",\n                        role: \"button\",\n                        \"aria-expanded\": \"false\",\n                        href: \"#details\",\n                        \"aria-controls\": \"collapseExample\",\n                        style: {\n                            cursor: 'pointer'\n                        },\n                        __source: {\n                            fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                            lineNumber: 38,\n                            columnNumber: 17\n                        },\n                        __self: undefined,\n                        children: \"Chandan Bansal\"\n                    }),\n                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"button\", {\n                        className: \"navbar-toggler\",\n                        type: \"button\",\n                        \"data-toggle\": \"collapse\",\n                        \"data-target\": \"#navbarNav\",\n                        \"aria-controls\": \"navbarNav\",\n                        \"aria-expanded\": \"false\",\n                        \"aria-label\": \"Toggle navigation\",\n                        __source: {\n                            fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                            lineNumber: 40,\n                            columnNumber: 17\n                        },\n                        __self: undefined,\n                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"span\", {\n                            className: \"navbar-toggler-icon\",\n                            __source: {\n                                fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                lineNumber: 42,\n                                columnNumber: 21\n                            },\n                            __self: undefined\n                        })\n                    }),\n                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"div\", {\n                        className: \"collapse navbar-collapse\",\n                        id: \"navbarNav\",\n                        __source: {\n                            fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                            lineNumber: 44,\n                            columnNumber: 17\n                        },\n                        __self: undefined,\n                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"ul\", {\n                            className: \"navbar-nav\",\n                            __source: {\n                                fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                lineNumber: 45,\n                                columnNumber: 21\n                            },\n                            __self: undefined,\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"li\", {\n                                    className: \"nav-item\",\n                                    __source: {\n                                        fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                        lineNumber: 46,\n                                        columnNumber: 25\n                                    },\n                                    __self: undefined,\n                                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"a\", {\n                                        className: \"nav-link\",\n                                        style: {\n                                            cursor: 'pointer'\n                                        },\n                                        onClick: ()=>redirectToPage('/#education')\n                                        ,\n                                        __source: {\n                                            fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                            lineNumber: 47,\n                                            columnNumber: 29\n                                        },\n                                        __self: undefined,\n                                        children: \"Education\"\n                                    })\n                                }),\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"li\", {\n                                    className: \"nav-item\",\n                                    __source: {\n                                        fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                        lineNumber: 49,\n                                        columnNumber: 25\n                                    },\n                                    __self: undefined,\n                                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"a\", {\n                                        className: \"nav-link\",\n                                        style: {\n                                            cursor: 'pointer'\n                                        },\n                                        onClick: ()=>redirectToPage('/#skills')\n                                        ,\n                                        __source: {\n                                            fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                            lineNumber: 50,\n                                            columnNumber: 29\n                                        },\n                                        __self: undefined,\n                                        children: \"Skills\"\n                                    })\n                                }),\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"li\", {\n                                    className: \"nav-item\",\n                                    __source: {\n                                        fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                        lineNumber: 52,\n                                        columnNumber: 25\n                                    },\n                                    __self: undefined,\n                                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"a\", {\n                                        className: \"nav-link\",\n                                        style: {\n                                            cursor: 'pointer'\n                                        },\n                                        onClick: ()=>redirectToPage('/#internships')\n                                        ,\n                                        __source: {\n                                            fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                            lineNumber: 53,\n                                            columnNumber: 29\n                                        },\n                                        __self: undefined,\n                                        children: \"Internships\"\n                                    })\n                                }),\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"li\", {\n                                    className: \"nav-item\",\n                                    __source: {\n                                        fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                        lineNumber: 55,\n                                        columnNumber: 25\n                                    },\n                                    __self: undefined,\n                                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"a\", {\n                                        className: \"nav-link\",\n                                        style: {\n                                            cursor: 'pointer'\n                                        },\n                                        onClick: ()=>redirectToPage('/#projects')\n                                        ,\n                                        __source: {\n                                            fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                            lineNumber: 56,\n                                            columnNumber: 29\n                                        },\n                                        __self: undefined,\n                                        children: \"Projects\"\n                                    })\n                                }),\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"li\", {\n                                    className: \"nav-item\",\n                                    __source: {\n                                        fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                        lineNumber: 58,\n                                        columnNumber: 25\n                                    },\n                                    __self: undefined,\n                                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"a\", {\n                                        className: \"nav-link\",\n                                        style: {\n                                            cursor: 'pointer'\n                                        },\n                                        onClick: ()=>redirectToPage('/blogs')\n                                        ,\n                                        __source: {\n                                            fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                            lineNumber: 59,\n                                            columnNumber: 29\n                                        },\n                                        __self: undefined,\n                                        children: \"Blogs\"\n                                    })\n                                }),\n                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"li\", {\n                                    className: \"nav-item darkmode_toggler\",\n                                    __source: {\n                                        fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                        lineNumber: 62,\n                                        columnNumber: 25\n                                    },\n                                    __self: undefined,\n                                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(\"abbr\", {\n                                        title: \"Dark Mode\",\n                                        __source: {\n                                            fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                            lineNumber: 63,\n                                            columnNumber: 29\n                                        },\n                                        __self: undefined,\n                                        children: [\n                                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"input\", {\n                                                className: \"container_toggle\",\n                                                type: \"checkbox\",\n                                                id: \"switch\",\n                                                name: \"mode\",\n                                                __source: {\n                                                    fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                                    lineNumber: 64,\n                                                    columnNumber: 33\n                                                },\n                                                __self: undefined\n                                            }),\n                                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"label\", {\n                                                htmlFor: \"switch\",\n                                                __source: {\n                                                    fileName: \"/home/chandan/projects/personal/portfolio/components/Nav.js\",\n                                                    lineNumber: 65,\n                                                    columnNumber: 33\n                                                },\n                                                __self: undefined,\n                                                children: \"Toggle\"\n                                            })\n                                        ]\n                                    })\n                                })\n                            ]\n                        })\n                    })\n                ]\n            })\n        ]\n    }));\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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LEVBQUMsQ0FBVzs7Ozs7Ozs7aUhBQ2xCQyxDQUFLO2dEQUFDdEIsU0FBUyxFQUFDLENBQWtCO2dEQUFDVyxJQUFJLEVBQUMsQ0FBVTtnREFBQ0ssRUFBRSxFQUFDLENBQVE7Z0RBQUNPLElBQUksRUFBQyxDQUFNOzs7Ozs7OztpSEFDMUVDLENBQUs7Z0RBQUNDLE9BQU8sRUFBRSxDQUFROzs7Ozs7OzBEQUFDLENBQU07Ozs7Ozs7Ozs7OztBQVMvRCxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcG9ydGZvbGlvLy4vY29tcG9uZW50cy9OYXYuanM/ODY0YSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnXG5pbXBvcnQgSGVhZCBmcm9tICduZXh0L2hlYWQnXG5pbXBvcnQgeyB1c2VFZmZlY3QgfSBmcm9tICdyZWFjdCdcbmltcG9ydCB7IHVzZVJvdXRlciB9IGZyb20gJ25leHQvcm91dGVyJ1xuXG5leHBvcnQgY29uc3QgTmF2ID0gKCkgPT4ge1xuICAgIGxldCB0cmFucyA9ICgpID0+IHtcbiAgICAgICAgZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LmNsYXNzTGlzdC5hZGQoJ3RyYW5zaXRpb24nKTtcbiAgICAgICAgd2luZG93LnNldFRpbWVvdXQoKCkgPT4ge1xuICAgICAgICAgICAgZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LmNsYXNzTGlzdC5yZW1vdmUoJ3RyYW5zaXRpb24nKTtcbiAgICAgICAgfSwgMClcbiAgICB9XG5cbiAgICB1c2VFZmZlY3QoKCkgPT4ge1xuICAgICAgICB2YXIgY2hlY2tib3ggPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCdpbnB1dFtuYW1lPW1vZGVdJyk7XG4gICAgICAgIGNoZWNrYm94LmFkZEV2ZW50TGlzdGVuZXIoJ2NoYW5nZScsIGZ1bmN0aW9uICgpIHtcbiAgICAgICAgICAgIGlmICh0aGlzLmNoZWNrZWQpIHtcbiAgICAgICAgICAgICAgICB0cmFucygpXG4gICAgICAgICAgICAgICAgZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LnNldEF0dHJpYnV0ZSgnZGF0YS10aGVtZScsICdkYXJ0aGVtZScpXG4gICAgICAgICAgICB9IGVsc2Uge1xuICAgICAgICAgICAgICAgIHRyYW5zKClcbiAgICAgICAgICAgICAgICBkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQuc2V0QXR0cmlidXRlKCdkYXRhLXRoZW1lJywgJ2xpZ2h0dGhlbWUnKVxuICAgICAgICAgICAgfVxuICAgICAgICB9KVxuICAgIH0pIFxuICAgIGNvbnN0IHJvdXRlciA9IHVzZVJvdXRlcigpO1xuICAgIGNvbnN0IHJlZGlyZWN0VG9QYWdlID0gKHBhZ2UpID0+IHtcbiAgICAgICAgcm91dGVyLnB1c2gocGFnZSlcbiAgICB9XG4gICAgcmV0dXJuIChcbiAgICAgICAgPD5cbiAgICAgICAgICAgIDxIZWFkPlxuICAgICAgICAgICAgICAgIDxsaW5rIHJlbD1cInN0eWxlc2hlZXRcIiBocmVmPVwiaHR0cHM6Ly9zdGFja3BhdGguYm9vdHN0cmFwY2RuLmNvbS9mb250LWF3ZXNvbWUvNC43LjAvY3NzL2ZvbnQtYXdlc29tZS5taW4uY3NzXCIgLz5cbiAgICAgICAgICAgICAgICA8bGluayByZWw9XCJzdHlsZXNoZWV0XCIgaHJlZj1cImh0dHBzOi8vc3RhY2twYXRoLmJvb3RzdHJhcGNkbi5jb20vYm9vdHN0cmFwLzQuNC4xL2Nzcy9ib290c3RyYXAubWluLmNzc1wiXG4gICAgICAgICAgICAgICAgICAgIGludGVncml0eT1cInNoYTM4NC1Wa29vOHg0Q0dzTzMrSGh4djhUL1E1UGFYdGtLdHU2dWc1VE9lTlY2Z0JpRmVXUEdGTjlNdWhPZjIzUTlJZmpoXCIgY3Jvc3NPcmlnaW49XCJhbm9ueW1vdXNcIiAvPlxuICAgICAgICAgICAgPC9IZWFkPlxuICAgICAgICAgICAgPG5hdiBjbGFzc05hbWU9XCJuYXZiYXIgbmF2YmFyLWV4cGFuZC1sZyBuYXZiYXItZGFyayBiZy1kYXJrXCIgc3R5bGU9e3twb3NpdGlvbjogXCJzdGlja3lcIiwgekluZGV4OiAzfX0+XG4gICAgICAgICAgICAgICAgPGEgY2xhc3NOYW1lPVwibmF2YmFyLWJyYW5kXCIgZGF0YS10b2dnbGU9XCJjb2xsYXBzZVwiIHJvbGU9XCJidXR0b25cIiBhcmlhLWV4cGFuZGVkPVwiZmFsc2VcIiBocmVmPScjZGV0YWlscydcbiAgICAgICAgICAgICAgICAgICAgYXJpYS1jb250cm9scz1cImNvbGxhcHNlRXhhbXBsZVwiIHN0eWxlPXt7Y3Vyc29yOiAncG9pbnRlcid9fT5DaGFuZGFuIEJhbnNhbDwvYT5cbiAgICAgICAgICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cIm5hdmJhci10b2dnbGVyXCIgdHlwZT1cImJ1dHRvblwiIGRhdGEtdG9nZ2xlPVwiY29sbGFwc2VcIiBkYXRhLXRhcmdldD1cIiNuYXZiYXJOYXZcIlxuICAgICAgICAgICAgICAgICAgICBhcmlhLWNvbnRyb2xzPVwibmF2YmFyTmF2XCIgYXJpYS1leHBhbmRlZD1cImZhbHNlXCIgYXJpYS1sYWJlbD1cIlRvZ2dsZSBuYXZpZ2F0aW9uXCI+XG4gICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cIm5hdmJhci10b2dnbGVyLWljb25cIj48L3NwYW4+XG4gICAgICAgICAgICAgICAgPC9idXR0b24+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb2xsYXBzZSBuYXZiYXItY29sbGFwc2VcIiBpZD1cIm5hdmJhck5hdlwiPlxuICAgICAgICAgICAgICAgICAgICA8dWwgY2xhc3NOYW1lPVwibmF2YmFyLW5hdlwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgPGxpIGNsYXNzTmFtZT1cIm5hdi1pdGVtXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGEgY2xhc3NOYW1lPVwibmF2LWxpbmtcIiBzdHlsZT17e2N1cnNvcjogJ3BvaW50ZXInfX0gb25DbGljaz17KCkgPT4gcmVkaXJlY3RUb1BhZ2UoJy8jZWR1Y2F0aW9uJyl9PkVkdWNhdGlvbjwvYT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgICAgICAgICAgICA8bGkgY2xhc3NOYW1lPVwibmF2LWl0ZW1cIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8YSBjbGFzc05hbWU9XCJuYXYtbGlua1wiIHN0eWxlPXt7Y3Vyc29yOiAncG9pbnRlcid9fSBvbkNsaWNrPXsoKSA9PiByZWRpcmVjdFRvUGFnZSgnLyNza2lsbHMnKX0+U2tpbGxzPC9hPlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9saT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJuYXYtaXRlbVwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxhIGNsYXNzTmFtZT1cIm5hdi1saW5rXCIgc3R5bGU9e3tjdXJzb3I6ICdwb2ludGVyJ319IG9uQ2xpY2s9eygpID0+IHJlZGlyZWN0VG9QYWdlKCcvI2ludGVybnNoaXBzJyl9PkludGVybnNoaXBzPC9hPlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9saT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJuYXYtaXRlbVwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxhIGNsYXNzTmFtZT1cIm5hdi1saW5rXCIgc3R5bGU9e3tjdXJzb3I6ICdwb2ludGVyJ319IG9uQ2xpY2s9eygpID0+IHJlZGlyZWN0VG9QYWdlKCcvI3Byb2plY3RzJyl9PlByb2plY3RzPC9hPlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9saT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJuYXYtaXRlbVwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxhIGNsYXNzTmFtZT1cIm5hdi1saW5rXCIgc3R5bGU9e3tjdXJzb3I6ICdwb2ludGVyJ319IG9uQ2xpY2s9eygpID0+IHJlZGlyZWN0VG9QYWdlKCcvYmxvZ3MnKX0+QmxvZ3M8L2E+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L2xpPlxuICAgICAgICAgICAgICAgICAgICAgICAgey8qRGFyayBNb2RlKi99XG4gICAgICAgICAgICAgICAgICAgICAgICA8bGkgY2xhc3NOYW1lPVwibmF2LWl0ZW0gZGFya21vZGVfdG9nZ2xlclwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxhYmJyIHRpdGxlPVwiRGFyayBNb2RlXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxpbnB1dCBjbGFzc05hbWU9XCJjb250YWluZXJfdG9nZ2xlXCIgdHlwZT1cImNoZWNrYm94XCIgaWQ9XCJzd2l0Y2hcIiBuYW1lPVwibW9kZVwiIC8+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsYWJlbCBodG1sRm9yID1cInN3aXRjaFwiPlRvZ2dsZTwvbGFiZWw+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9hYmJyPiAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvbGk+XG5cbiAgICAgICAgICAgICAgICAgICAgPC91bD5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvbmF2PlxuICAgICAgICA8Lz5cbiAgICApXG59XG4iXSwibmFtZXMiOlsiUmVhY3QiLCJIZWFkIiwidXNlRWZmZWN0IiwidXNlUm91dGVyIiwiTmF2IiwidHJhbnMiLCJkb2N1bWVudCIsImRvY3VtZW50RWxlbWVudCIsImNsYXNzTGlzdCIsImFkZCIsIndpbmRvdyIsInNldFRpbWVvdXQiLCJyZW1vdmUiLCJjaGVja2JveCIsInF1ZXJ5U2VsZWN0b3IiLCJhZGRFdmVudExpc3RlbmVyIiwiY2hlY2tlZCIsInNldEF0dHJpYnV0ZSIsInJvdXRlciIsInJlZGlyZWN0VG9QYWdlIiwicGFnZSIsInB1c2giLCJsaW5rIiwicmVsIiwiaHJlZiIsImludGVncml0eSIsImNyb3NzT3JpZ2luIiwibmF2IiwiY2xhc3NOYW1lIiwic3R5bGUiLCJwb3NpdGlvbiIsInpJbmRleCIsImEiLCJkYXRhLXRvZ2dsZSIsInJvbGUiLCJhcmlhLWV4cGFuZGVkIiwiYXJpYS1jb250cm9scyIsImN1cnNvciIsImJ1dHRvbiIsInR5cGUiLCJkYXRhLXRhcmdldCIsImFyaWEtbGFiZWwiLCJzcGFuIiwiZGl2IiwiaWQiLCJ1bCIsImxpIiwib25DbGljayIsImFiYnIiLCJ0aXRsZSIsImlucHV0IiwibmFtZSIsImxhYmVsIiwiaHRtbEZvciJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/Nav.js\n");
 
+/***/ }),
 
+/***/ "./pages/_app.js":
+/*!***********************!*\
+  !*** ./pages/_app.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"react/jsx-runtime\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout */ \"./components/Layout.js\");\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/globals.css */ \"./styles/globals.css\");\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nfunction MyApp({ Component , pageProps  }) {\n    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components_Layout__WEBPACK_IMPORTED_MODULE_1__.Layout, {\n        __source: {\n            fileName: \"/home/chandan/projects/personal/portfolio/pages/_app.js\",\n            lineNumber: 6,\n            columnNumber: 5\n        },\n        __self: this,\n        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Component, {\n            ...pageProps,\n            __source: {\n                fileName: \"/home/chandan/projects/personal/portfolio/pages/_app.js\",\n                lineNumber: 7,\n                columnNumber: 7\n            },\n            __self: this\n        })\n    }));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyApp);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9fYXBwLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFBNkM7QUFDZjtTQUVyQkMsS0FBSyxDQUFDLENBQUMsQ0FBQ0MsU0FBUyxHQUFFQyxTQUFTLEVBQUMsQ0FBQyxFQUFFLENBQUM7SUFDeEMsTUFBTSxzRUFDSEgsc0RBQU07Ozs7Ozs7dUZBQ0pFLFNBQVM7ZUFBS0MsU0FBUzs7Ozs7Ozs7O0FBRzlCLENBQUM7QUFFRCxpRUFBZUYsS0FBSyIsInNvdXJjZXMiOlsid2VicGFjazovL3BvcnRmb2xpby8uL3BhZ2VzL19hcHAuanM/ZTBhZCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBMYXlvdXQgfSBmcm9tICcuLi9jb21wb25lbnRzL0xheW91dCdcbmltcG9ydCAnLi4vc3R5bGVzL2dsb2JhbHMuY3NzJ1xuXG5mdW5jdGlvbiBNeUFwcCh7IENvbXBvbmVudCwgcGFnZVByb3BzIH0pIHtcbiAgcmV0dXJuIChcbiAgICA8TGF5b3V0PlxuICAgICAgPENvbXBvbmVudCB7Li4ucGFnZVByb3BzfSAvPlxuICAgIDwvTGF5b3V0PlxuICApXG59XG5cbmV4cG9ydCBkZWZhdWx0IE15QXBwXG4iXSwibmFtZXMiOlsiTGF5b3V0IiwiTXlBcHAiLCJDb21wb25lbnQiLCJwYWdlUHJvcHMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/_app.js\n");
 
-const Nav = ()=>{
-    let trans = ()=>{
-        document.documentElement.classList.add('transition');
-        window.setTimeout(()=>{
-            document.documentElement.classList.remove('transition');
-        }, 0);
-    };
-    (0,external_react_.useEffect)(()=>{
-        var checkbox = document.querySelector('input[name=mode]');
-        checkbox.addEventListener('change', function() {
-            if (this.checked) {
-                trans();
-                document.documentElement.setAttribute('data-theme', 'dartheme');
-            } else {
-                trans();
-                document.documentElement.setAttribute('data-theme', 'lighttheme');
-            }
-        });
-    });
-    const router = (0,router_.useRouter)();
-    const redirectToPage = (page)=>{
-        router.push(page);
-    };
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
-        children: [
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)((head_default()), {
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("link", {
-                        rel: "stylesheet",
-                        href: "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("link", {
-                        rel: "stylesheet",
-                        href: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css",
-                        integrity: "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh",
-                        crossorigin: "anonymous"
-                    })
-                ]
-            }),
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("nav", {
-                className: "navbar navbar-expand-lg navbar-dark bg-dark",
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("a", {
-                        className: "navbar-brand",
-                        "data-toggle": "collapse",
-                        role: "button",
-                        "aria-expanded": "false",
-                        href: "#details",
-                        "aria-controls": "collapseExample",
-                        style: {
-                            cursor: 'pointer'
-                        },
-                        children: "Chandan Bansal"
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("button", {
-                        className: "navbar-toggler",
-                        type: "button",
-                        "data-toggle": "collapse",
-                        "data-target": "#navbarNav",
-                        "aria-controls": "navbarNav",
-                        "aria-expanded": "false",
-                        "aria-label": "Toggle navigation",
-                        children: /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                            className: "navbar-toggler-icon"
-                        })
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        className: "collapse navbar-collapse",
-                        id: "navbarNav",
-                        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("ul", {
-                            className: "navbar-nav",
-                            children: [
-                                /*#__PURE__*/ jsx_runtime_.jsx("li", {
-                                    className: "nav-item",
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
-                                        className: "nav-link",
-                                        style: {
-                                            cursor: 'pointer'
-                                        },
-                                        onClick: ()=>redirectToPage('/#education')
-                                        ,
-                                        children: "Education"
-                                    })
-                                }),
-                                /*#__PURE__*/ jsx_runtime_.jsx("li", {
-                                    className: "nav-item",
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
-                                        className: "nav-link",
-                                        style: {
-                                            cursor: 'pointer'
-                                        },
-                                        onClick: ()=>redirectToPage('/#skills')
-                                        ,
-                                        children: "Skills"
-                                    })
-                                }),
-                                /*#__PURE__*/ jsx_runtime_.jsx("li", {
-                                    className: "nav-item",
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
-                                        className: "nav-link",
-                                        style: {
-                                            cursor: 'pointer'
-                                        },
-                                        onClick: ()=>redirectToPage('/#internships')
-                                        ,
-                                        children: "Internships"
-                                    })
-                                }),
-                                /*#__PURE__*/ jsx_runtime_.jsx("li", {
-                                    className: "nav-item",
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
-                                        className: "nav-link",
-                                        style: {
-                                            cursor: 'pointer'
-                                        },
-                                        onClick: ()=>redirectToPage('/#projects')
-                                        ,
-                                        children: "Projects"
-                                    })
-                                }),
-                                /*#__PURE__*/ jsx_runtime_.jsx("li", {
-                                    className: "nav-item",
-                                    children: /*#__PURE__*/ jsx_runtime_.jsx("a", {
-                                        className: "nav-link",
-                                        style: {
-                                            cursor: 'pointer'
-                                        },
-                                        onClick: ()=>redirectToPage('/blogs')
-                                        ,
-                                        children: "Blogs"
-                                    })
-                                }),
-                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("li", {
-                                    className: "nav-item darkmode_toggler",
-                                    children: [
-                                        /*#__PURE__*/ jsx_runtime_.jsx("input", {
-                                            className: "container_toggle",
-                                            type: "checkbox",
-                                            id: "switch",
-                                            name: "mode"
-                                        }),
-                                        /*#__PURE__*/ jsx_runtime_.jsx("label", {
-                                            for: "switch",
-                                            children: "Toggle"
-                                        })
-                                    ]
-                                })
-                            ]
-                        })
-                    })
-                ]
-            })
-        ]
-    }));
-};
+/***/ }),
 
-;// CONCATENATED MODULE: ./components/Layout.js
+/***/ "./styles/globals.css":
+/*!****************************!*\
+  !*** ./styles/globals.css ***!
+  \****************************/
+/***/ (() => {
 
-
-
-
-const Layout = ({ children  })=>{
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-        children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(components_Meta, {
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx(Nav, {
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                children: /*#__PURE__*/ jsx_runtime_.jsx("main", {
-                    children: children
-                })
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("script", {
-                src: "https://code.jquery.com/jquery-3.4.1.slim.min.js",
-                integrity: "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n",
-                crossorigin: "anonymous"
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("script", {
-                src: "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js",
-                integrity: "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo",
-                crossorigin: "anonymous"
-            }),
-            /*#__PURE__*/ jsx_runtime_.jsx("script", {
-                src: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
-                integrity: "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6",
-                crossorigin: "anonymous"
-            })
-        ]
-    }));
-};
-
-;// CONCATENATED MODULE: ./pages/_app.js
-
-
-
-function MyApp({ Component , pageProps  }) {
-    return(/*#__PURE__*/ jsx_runtime_.jsx(Layout, {
-        children: /*#__PURE__*/ jsx_runtime_.jsx(Component, {
-            ...pageProps
-        })
-    }));
-}
-/* harmony default export */ const _app = (MyApp);
 
 
 /***/ }),
 
-/***/ 968:
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/head");
 
 /***/ }),
 
-/***/ 853:
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("next/router");
 
 /***/ }),
 
-/***/ 689:
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("react");
 
 /***/ }),
 
-/***/ 997:
+/***/ "react/jsx-runtime":
+/*!************************************!*\
+  !*** external "react/jsx-runtime" ***!
+  \************************************/
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("react/jsx-runtime");
 
 /***/ })
@@ -327,7 +128,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(324));
+var __webpack_exports__ = (__webpack_exec__("./pages/_app.js"));
 module.exports = __webpack_exports__;
 
 })();

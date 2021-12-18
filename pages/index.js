@@ -31,7 +31,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <body className="body">
+      <div className="body">
         <div className="collapse" id="details">
           <div className="card card-body">
             <div className="alert alert-success" role="alert">
@@ -344,7 +344,7 @@ export default function Home() {
           s0.parentNode.insertBefore(s1, s0);
         })()} */}
         {/*End of Tawk.to Script*/}
-      </body>
+      </div>
 
     </div>
 
