@@ -4,7 +4,8 @@ const blogs = [
         "description" : "Cannot reach the server at this moment. Please try again later!",
         "comments" : [{
             "name" : "Server Bot",
-            "comment" : "Oh Snap! Server Under Maintainance!"
+            "comment" : "Oh Snap! Server Under Maintainance!",
+            "createdAt" : "THE BOT ERA!"
         },
         ]
     },
