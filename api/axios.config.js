@@ -1,7 +1,11 @@
 import axios from "axios";
 import {dummyData} from "./dummy/index";
+let Axios = 
+!process.env.NODE_ENV || process.env.NODE_ENV==='development' ?
+  axios.create({ baseURL: process.env.DEV_URL }) :
+  axios.create({ baseURL: process.env.SERVER_URL })
+// console.log('ENV : ', process.env.NODE_ENV)
 
-const Axios = axios.create({ baseURL: process.env.SERVER_URL });
 
 Axios.interceptors.response.use(
   (response) => {
