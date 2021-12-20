@@ -4,8 +4,7 @@ import Item from '../components/Blog/Item'
 import style from './../styles/blogs.module.css'
 
 const blogs = ({data}) => {
-    { data.map(item => console.log("IN BLOGS.JS, the blogs :", item)) }
-
+    data.map(item => console.log("IN BLOGS.JS, the blogs :", item)) 
     const changeActiveTab = (type) => {
         if (type == "private") {
             document.getElementById("public").classList.remove("active")

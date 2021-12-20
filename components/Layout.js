@@ -1,7 +1,6 @@
 import { Header } from "./Header"
 import Meta from "./Meta"
 import { Nav } from "./Nav"
-
 export const Layout = ({children}) => {
     return (
         <div>
