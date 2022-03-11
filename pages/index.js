@@ -4,16 +4,16 @@ export default function Home() {
   const minimisedWindow = (e) => {
     e.preventDefault();
     if (e.target.parentNode.href) {
-        var target = e.target.parentNode.href;
-        let w = window.innerWidth*0.9
-        let h = window.innerHeight*0.9
-        let mt = window.innerHeight - h
-        let ml = window.innerWidth - w
-        if(target.slice(-6)!=="#modal") {
-            setTimeout(function () {
-                window.open(target, "_blank", `toolbar=yes,scrollbars=yes,resizable=yes,top=${mt},left=${ml},width=${w},height=${h}`);
-            }, 500);
-        }
+      var target = e.target.parentNode.href;
+      let w = window.innerWidth * 0.9
+      let h = window.innerHeight * 0.9
+      let mt = window.innerHeight - h
+      let ml = window.innerWidth - w
+      if (target.slice(-6) !== "#modal") {
+        setTimeout(function () {
+          window.open(target, "_blank", `toolbar=yes,scrollbars=yes,resizable=yes,top=${mt},left=${ml},width=${w},height=${h}`);
+        }, 500);
+      }
     }
   }
 
@@ -94,7 +94,7 @@ export default function Home() {
                     FRONTEND DEV : Html, Css, Javascript, ReactJs, ReactNative, NextJS
                   </li>
                   <li>
-                    BACKEND DEV : NodeJs
+                    BACKEND DEV : NodeJs, Java
                   </li>
                   <li>
                     DATABASE MANAGEMENT : MongoDb, MySql, SqLite
@@ -134,10 +134,35 @@ export default function Home() {
           <section id="internships">
             <div className="container">
               <div className="jumbotron">
-                <h1>Internship Works <br />
-                  <p className="companyHead">Company: Techtonic Enterprises Private Limited<br /></p>
-                </h1>
-                <p style={{marginTop: '-25px', marginBottom: '30px'}}>Designation: MERN stack developer</p>
+                <h1>Internship Works <br /></h1>
+
+                <p className="companyHead">Company: Paytm<br /></p>
+                <p style={{ marginTop: '-25px', marginBottom: '30px' }}>Designation: Software Developer || Department of Payment Gateway</p>
+
+                <div className="timelineWork paytm" >
+                  <div className="container workSamples">
+                    <h4>
+                      DESCRIPTION
+                    </h4>
+                    <ul>
+                      <li>
+                        5 Months Internship till June, 2022.
+                      </li>
+                      <li>
+                        Working on Java and its Libraries, Core Computer Science Concepts, Kafka related Programmes, AWS.
+                      </li>
+                      <li>
+                        Made a project involving CRUD, Caching, ORM, Logging, Transaction, Multithreading, Exception Handling
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+
+
+
+                <p className="companyHead">Company: Techtonic Enterprises Private Limited<br /></p>
+                <p style={{ marginTop: '-25px', marginBottom: '30px' }}>Designation: MERN stack developer</p>
 
                 <div className="timelineWork mayandco" >
                   <div className="container workSamples">
@@ -159,14 +184,12 @@ export default function Home() {
                     </p>
                     <p><a href="https://maytestdomain.netlify.app" target="_blank">Let's take a visit</a></p>
                     <div className="wsImgDiv">
-                      <img src='/assets/images/mayCoDesktop.png' alt="Preview Desktop View"/>
-                      <img src="/assets/images/mayandcomobile.jpeg" alt="Preview Mobile View"/>
+                      <img src='/assets/images/mayCoDesktop.png' alt="Preview Desktop View" />
+                      <img src="/assets/images/mayandcomobile.jpeg" alt="Preview Mobile View" />
                     </div>
 
                   </div>
                 </div>
-
-
 
                 <div className="timelineWork kohler">
                   <div className="container workSamples">
@@ -237,9 +260,9 @@ export default function Home() {
                       some amazing features like carousels, animations, 3rd party APIs like formspree, tawk and so on.
                     </p>
                     <p>
-                      Also built a few similar projects based on similar set of technologies. 
-                      For example <a href="https://chandan1602.github.io" target="_blank" style={{textDecoration: 'none', fontWeight: 600}}>Pumate</a> 
-                      <span style={{marginLeft: '23px'}}>,</span> this portfolio itself &#9997;.
+                      Also built a few similar projects based on similar set of technologies.
+                      For example <a href="https://chandan1602.github.io" target="_blank" style={{ textDecoration: 'none', fontWeight: 600 }}>Pumate</a>
+                      <span style={{ marginLeft: '23px' }}>,</span> this portfolio itself &#9997;.
                     </p>
                     <p><a href="https://platformtechs.in" target="_blank">Let's take a visit</a></p>
                     <div className="wsImgDiv">
@@ -265,7 +288,7 @@ export default function Home() {
                         </a>
                     </li> */}
               <li>
-                <a href="https://www.linkedin.com/in/chandan-bansal-5483a616b" target="_blank" onClick={(e)=>minimisedWindow(e)}>
+                <a href="https://www.linkedin.com/in/chandan-bansal-5483a616b" target="_blank" onClick={(e) => minimisedWindow(e)}>
                   <span></span>
                   <span></span>
                   <span></span>
@@ -283,7 +306,7 @@ export default function Home() {
                         </a>
                     </li> */}
               <li>
-                <a href="https://github.com/chandan1602" target="_blank" onClick={(e)=>minimisedWindow(e)}>
+                <a href="https://github.com/chandan1602" target="_blank" onClick={(e) => minimisedWindow(e)}>
                   <span></span>
                   <span></span>
                   <span></span>
