@@ -20,14 +20,13 @@ export default function Home() {
   return (
     <div>
       <Head>
-        {/* Global site tag (gtag.js) - Google Analytics 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3L1H5P9M8P"></script>
         {window.dataLayer = window.dataLayer || []}
         {function gtag() { dataLayer.push(arguments) }}
         {gtag('js', new Date())}
         {gtag('config', 'G-3L1H5P9M8P')}
         <script data-ad-client="ca-pub-3512964287065310" async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> */}
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -354,19 +353,7 @@ export default function Home() {
           </div>
 
         </div>
-
-        {/*Start of Tawk.to Script*/}
-        {/* {Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date()}
-        {(function () {
-          var s1 = document.createElement("script"),
-            s0 = document.getElementsByTagName("script")[0];
-          s1.async = true;
-          s1.src = 'https://embed.tawk.to/5e721acaeec7650c3320d213/default';
-          s1.charset = 'UTF-8';
-          s1.setAttribute('crossorigin', '*');
-          s0.parentNode.insertBefore(s1, s0);
-        })()} */}
-        {/*End of Tawk.to Script*/}
+        
       </div>
 
     </div>
