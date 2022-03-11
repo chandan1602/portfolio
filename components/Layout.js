@@ -1,5 +1,4 @@
 import { Header } from "./Header"
-import { tawkInit } from "../util/helperFunctions/tawkInit"
 import Meta from "./Meta"
 import { Nav } from "./Nav"
 export const Layout = ({ children }) => {
@@ -12,9 +11,6 @@ export const Layout = ({ children }) => {
           {children}
         </main>
       </div>
-      <script type="text/javascript">
-        {tawkInit()}
-      </script>
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossOrigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
