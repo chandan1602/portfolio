@@ -30,6 +30,13 @@ export default function Home() {
     })();
     }
 
+  const gtagInit = () => {
+    window.dataLayer = window.dataLayer || []
+    function gtag() { dataLayer.push(arguments) }
+    gtag('js', new Date())
+    gtag('config', 'G-3L1H5P9M8P')
+  }
+
   useEffect(() => {
     tawkInit();
   })
@@ -38,10 +45,7 @@ export default function Home() {
     <div>
       <Head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3L1H5P9M8P"></script>
-        {window.dataLayer = window.dataLayer || []}
-        {function gtag() { dataLayer.push(arguments) }}
-        {gtag('js', new Date())}
-        {gtag('config', 'G-3L1H5P9M8P')}
+        {gtagInit()}
         <script data-ad-client="ca-pub-3512964287065310" async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <link rel="icon" href="/favicon.ico" />
