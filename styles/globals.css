@@ -171,6 +171,13 @@ html.transition *:after {
     bottom: 0;
 }
 
+.timelineWork.paytm::before {
+  content: "June-2022";
+}
+.timelineWork.paytm::after {
+  content: "Jan-2022";
+}
+
 .timelineWork.mayandco::before {
     content: "Aug-2021";
 }

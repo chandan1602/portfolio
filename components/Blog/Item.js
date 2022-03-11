@@ -12,7 +12,7 @@ const Item = ({ id, index, description, timestamp, comments }) => {
         const value = e.target.value
         setcommentData({ ...commentData, [name]: value })
     }
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         const data = {
             id,
@@ -20,7 +20,7 @@ const Item = ({ id, index, description, timestamp, comments }) => {
             comment: commentData.description
         }
         console.log("Data : ", data)
-        commentService.postComment(data)
+        await commentService.postComment(data)
     }
     return (
         <div className="container">
