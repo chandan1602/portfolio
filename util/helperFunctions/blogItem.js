@@ -1,4 +1,5 @@
 export const getTimeStamp = (org) => {
+    if(!org || org=="") return "just now";
     const curr = new Date()
     if(curr.getUTCFullYear()!==Number(org.slice(0,4))) {
         let diff = curr.getFullYear() - Number(org.slice(0,4))
@@ -6,7 +7,6 @@ export const getTimeStamp = (org) => {
         return `${diff} years ago`
     }
     else if((curr.getUTCMonth()+1)!==Number(org.slice(5,7))) {
-        console.log("MONTH : ", curr.getMonth())
         let diff = curr.getMonth() + 1 - Number(org.slice(5,7)) 
         if(diff===1) return '1 month ago'
         return `${diff} months ago`
