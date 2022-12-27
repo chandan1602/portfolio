@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import styles from './../../styles/TextButton.module.css'
-
+import styles from './../../styles/textButton.module.css'
 const TextButton = (props) => {
     return(
     <div className={styles.main}>
