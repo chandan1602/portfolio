@@ -58,6 +58,9 @@ export const Nav = () => {
                         <li className="nav-item">
                             <a className="nav-link" style={{cursor: 'pointer'}} onClick={() => redirectToPage('/blogs')}>Blogs</a>
                         </li>
+                        <li className="nav-item">
+                            <a className="nav-link" style={{cursor: 'pointer'}} onClick={() => redirectToPage('/signin')}>Manage</a>
+                        </li>
                         {/*Dark Mode*/}
                         <li className="nav-item darkmode_toggler">
                             <abbr title="Dark Mode">

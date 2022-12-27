@@ -1,9 +1,10 @@
 import React from 'react'
 
-export const Header = () => {
+export const Header = (props) => {
     return (
         <div>
-            <p>Header</p>
+            <h3 style={{"textAlign" : "center"}}>{props.title}</h3>
+            <hr />
         </div>
     )
 }

@@ -1,3 +1,11 @@
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    height: 90vh;
+}
+
 .blogs_main {
     margin-top: 50px;
 }
@@ -7,6 +15,13 @@
     justify-content: space-between;
     flex-direction: column;
     position: relative;
+}
+
+.commentDate {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .bl {
@@ -35,17 +50,55 @@
 
 .cB {
     margin: 5px 0px;
+    margin-bottom: 10px;
     padding: 5px 20px;
+    border-radius: 7px;
+    width: 50vw;
 }
 
 .cFM {
     border: 1px solid rgba(0,0,0,0.2);
     border-radius: 7px;
     padding-top: 10px;
-    margin-bottom: 20px;
+    margin: 0px 0px 20px 0px;
 }
 
 .fB {
     margin-top: 5px;
     margin-bottom: 10px;
+}
+
+.listingBox {
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    padding: 15px;
+    cursor: pointer;
+    background: linear-gradient(120deg, grey, white, grey);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position .5s;
+    margin: 10px 0px 10px 0px;
+}
+
+.listingBox:hover {
+    background-position: 0 0;
+}
+
+.listingBox p {
+    margin-bottom: 0px;
+    font-size: 18px;
+}
+
+.listingBox:hover p {
+    color: rgba(255,255,255,1);
+    transition: background-position .5s;
+    font-weight: 400;
+}
+
+.listingBox p::after {
+    content: "\00a0\2192";
+    size: 200%;
 }
