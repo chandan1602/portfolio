@@ -16,5 +16,5 @@ export const dummyData = (url = "") => {
       return { data: blogs };
     }
   
-    return { data: null, error: true };
+    return { data: [{}], error: true };
   };
