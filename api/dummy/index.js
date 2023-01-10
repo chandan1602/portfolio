@@ -15,6 +15,17 @@ export const dummyData = (url = "") => {
     if (url.includes("blogs")) {
       return { data: blogs };
     }
+
+    if(url.includes("slug")) {
+        return {
+            data : [
+                {
+                    "slug" : "loading",
+                    "_id" : "loading"
+                }
+            ]
+        }
+    }
   
     return { data: [{}], error: true };
   };
