@@ -38,6 +38,7 @@ export const getStaticProps = async (context) => {
 
 export const getStaticPaths = async () => {
     const { data } = await blogService.getSlugs();
+    console.log("Blog slugs : ", data)
     const pathsWithParams = data.map((obj) => ({ params: { slug: obj.slug } }))
 
     return {
