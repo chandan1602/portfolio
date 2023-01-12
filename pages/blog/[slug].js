@@ -25,7 +25,7 @@ const Blog = (props) => {
     )
 }
 
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
     try {
         // const slug = context.params?.slug;
         const slug = context.query?.slug;
@@ -44,17 +44,17 @@ export const getServerSideProps = async (context) => {
     }
 }
 
-// export async function getStaticPaths(context) {
-//     // const { data } = await blogService.getSlugs();
-//     const data = await getRequest(CONSTANTS.GET_SLUGS_URL);
-//     // console.log("Blog slugs : ", data)
-//     const pathsWithParams = data.map((obj) => ({ params: { slug: obj.slug } }));
+export async function getStaticPaths(context) {
+    // const { data } = await blogService.getSlugs();
+    const data = await getRequest(CONSTANTS.GET_SLUGS_URL);
+    // console.log("Blog slugs : ", data)
+    const pathsWithParams = data.map((obj) => ({ params: { slug: obj.slug } }));
 
-//     return {
-//         paths: pathsWithParams,
-//         fallback: false
-//     }
-// }
+    return {
+        paths: pathsWithParams,
+        fallback: false
+    }
+}
 
 const getRequest = async (URL) => {
     const options = {
