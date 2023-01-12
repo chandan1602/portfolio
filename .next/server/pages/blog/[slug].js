@@ -25,27 +25,39 @@ module.exports = {
 
 /***/ }),
 
-/***/ 602:
+/***/ 565:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps),
-/* harmony export */   "getStaticPaths": () => (/* binding */ getStaticPaths),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(358);
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(853);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(171);
-/* harmony import */ var _components_Blog_Item__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(20);
-/* harmony import */ var _api_CONSTANTS__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(793);
-/* harmony import */ var _api_CONSTANTS__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_api_CONSTANTS__WEBPACK_IMPORTED_MODULE_6__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ _slug_),
+  "getStaticPaths": () => (/* binding */ getStaticPaths),
+  "getStaticProps": () => (/* binding */ getStaticProps)
+});
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(997);
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(689);
+// EXTERNAL MODULE: external "react-bootstrap"
+var external_react_bootstrap_ = __webpack_require__(358);
+// EXTERNAL MODULE: external "next/router"
+var router_ = __webpack_require__(853);
+// EXTERNAL MODULE: ./api/index.js + 5 modules
+var api = __webpack_require__(171);
+// EXTERNAL MODULE: ./components/Blog/Item.js + 2 modules
+var Item = __webpack_require__(20);
+// EXTERNAL MODULE: ./api/CONSTANTS.js
+var CONSTANTS = __webpack_require__(793);
+var CONSTANTS_default = /*#__PURE__*/__webpack_require__.n(CONSTANTS);
+;// CONCATENATED MODULE: external "https"
+const external_https_namespaceObject = require("https");
+var external_https_default = /*#__PURE__*/__webpack_require__.n(external_https_namespaceObject);
+;// CONCATENATED MODULE: ./pages/blog/[slug].js
+
 
 
 
@@ -55,14 +67,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const Blog = (props)=>{
-    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)();
+    const router = (0,router_.useRouter)();
     // if(props.hasError) {
     //     return <div>Blog Does not Exist...</div>
     // }
-    if (router.isFallback) return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+    if (router.isFallback) return(/*#__PURE__*/ jsx_runtime_.jsx("h1", {
         children: "Loading..."
     }));
-    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Blog_Item__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
+    return(/*#__PURE__*/ jsx_runtime_.jsx(Item/* default */.Z, {
         id: props.data._id,
         description: props.data.description,
         comments: props.data.comments,
@@ -74,7 +86,7 @@ const getStaticProps = async (context)=>{
     try {
         var ref;
         const slug = (ref = context.params) === null || ref === void 0 ? void 0 : ref.slug;
-        const { data  } = await _api__WEBPACK_IMPORTED_MODULE_4__/* .blogService.getBlogBySlug */ .wS.getBlogBySlug(slug);
+        const { data  } = await api/* blogService.getBlogBySlug */.wS.getBlogBySlug(slug);
         // let data  = await fetch(CONSTANTS.GET_BLOG_BY_SLUG_URL + slug)
         //     .then(data => data.json())
         //     .then(data => data.data);
@@ -96,14 +108,16 @@ const getStaticProps = async (context)=>{
 };
 async function getStaticPaths(context) {
     // const { data } = await blogService.getSlugs();
-    const url = (_api_CONSTANTS__WEBPACK_IMPORTED_MODULE_6___default().GET_SLUGS_URL);
-    console.log(url);
-    let data = await fetch((_api_CONSTANTS__WEBPACK_IMPORTED_MODULE_6___default().GET_SLUGS_URL));
-    data = await data.json();
-    data = data.data;
-    // .then(data => data.data);
-    console.log("Blog slugs : ", data);
-    const pathsWithParams = data.map((obj)=>({
+    const options = {
+        agent: new (external_https_default()).Agent({
+            rejectUnauthorized: false
+        })
+    };
+    let data1 = await fetch((CONSTANTS_default()).GET_SLUGS_URL, options).then((data)=>data.json()
+    ).then((data)=>data.data
+    );
+    // console.log("Blog slugs : ", data)
+    const pathsWithParams = data1.map((obj)=>({
             params: {
                 slug: obj.slug
             }
@@ -114,7 +128,7 @@ async function getStaticPaths(context) {
         fallback: false
     };
 }
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Blog);
+/* harmony default export */ const _slug_ = (Blog);
 
 
 /***/ }),
@@ -161,7 +175,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [171,20], () => (__webpack_exec__(602)));
+var __webpack_exports__ = __webpack_require__.X(0, [171,20], () => (__webpack_exec__(565)));
 module.exports = __webpack_exports__;
 
 })();

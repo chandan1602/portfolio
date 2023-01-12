@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { blogService } from '../../api'
 import Item from '../../components/Blog/Item';
 import CONSTANTS from '../../api/CONSTANTS';
+import https from 'https'
 
 const Blog = (props) => {
     const router = useRouter();
@@ -42,7 +43,12 @@ export const getStaticProps = async (context) => {
 
 export async function getStaticPaths(context) {
     // const { data } = await blogService.getSlugs();
-    let data = await fetch(CONSTANTS.GET_SLUGS_URL)
+    const options = {
+        agent: new https.Agent({
+          rejectUnauthorized: false
+        })
+      };
+    let data = await fetch(CONSTANTS.GET_SLUGS_URL, options)
         .then(data => data.json())
         .then(data => data.data);
     // console.log("Blog slugs : ", data)
