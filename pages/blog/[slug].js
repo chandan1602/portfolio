@@ -27,7 +27,9 @@ const Blog = (props) => {
 
 export const getServerSideProps = async (context) => {
     try {
-        const slug = context.params?.slug;
+        // const slug = context.params?.slug;
+        const slug = context.query?.slug;
+        console.log("Loading Slug : ", slug);
         // const { data } = await blogService.getBlogBySlug(slug);
         const data = await getRequest(CONSTANTS.GET_BLOG_BY_SLUG_URL + slug);
         // let data  = await fetch(CONSTANTS.GET_BLOG_BY_SLUG_URL + slug)
