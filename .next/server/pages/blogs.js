@@ -57,9 +57,10 @@ var router_ = __webpack_require__(853);
 
 const blogs = ({ data  })=>{
     const router = (0,router_.useRouter)();
-    const { 0: isLoading , 1: setIsLoading  } = (0,external_react_.useState)(true);
+    const { 0: isLoading , 1: setIsLoading  } = (0,external_react_.useState)(false);
     (0,external_react_.useEffect)(()=>{
-        setIsLoading(false);
+        console.log(data);
+    // setIsLoading(false);
     }, []);
     const redirectToSlug = (e, slug)=>{
         router.push("/blog/" + slug);

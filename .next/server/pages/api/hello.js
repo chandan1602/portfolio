@@ -14,7 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* binding */ handler),
-  "getStaticPaths": () => (/* binding */ getStaticPaths)
+  "getAllBlog": () => (/* binding */ getAllBlog)
 });
 
 ;// CONCATENATED MODULE: external "axios"
@@ -128,7 +128,7 @@ function handler(req, res) {
         name: 'John Doe'
     });
 };
-async function getStaticPaths() {
+async function getAllBlog() {
     const { data , error  } = await getBlogs();
     if (!error) {
         const paths = data.map((blog)=>({

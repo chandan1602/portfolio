@@ -8,10 +8,11 @@ import {useRouter} from 'next/router';
 
 const blogs = ({data}) => {
     const router = useRouter();
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     
     useEffect(() => {
-        setIsLoading(false);
+        console.log(data);
+        // setIsLoading(false);
     }, [])
 
     const redirectToSlug = (e, slug) => {
