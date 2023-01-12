@@ -28,7 +28,8 @@ const Blog = (props) => {
 export const getStaticProps = async (context) => {
     try {
         const slug = context.params?.slug;
-        const { data } = await blogService.getBlogBySlug(slug);
+        // const { data } = await blogService.getBlogBySlug(slug);
+        const data = await getRequest(CONSTANTS.GET_BLOG_BY_SLUG_URL + slug);
         // let data  = await fetch(CONSTANTS.GET_BLOG_BY_SLUG_URL + slug)
         //     .then(data => data.json())
         //     .then(data => data.data);
@@ -43,14 +44,7 @@ export const getStaticProps = async (context) => {
 
 export async function getStaticPaths(context) {
     // const { data } = await blogService.getSlugs();
-    const options = {
-        agent: new https.Agent({
-          rejectUnauthorized: false
-        })
-      };
-    let data = await fetch(CONSTANTS.GET_SLUGS_URL, options)
-        .then(data => data.json())
-        .then(data => data.data);
+    const data = await getRequest(CONSTANTS.GET_SLUGS_URL);
     // console.log("Blog slugs : ", data)
     const pathsWithParams = data.map((obj) => ({ params: { slug: obj.slug } }));
 
@@ -58,6 +52,18 @@ export async function getStaticPaths(context) {
         paths: pathsWithParams,
         fallback: false
     }
+}
+
+const getRequest = async (URL) => {
+    const options = {
+        agent: new https.Agent({
+          rejectUnauthorized: false
+        })
+      };
+    let data = await fetch(URL, options)
+        .then(data => data.json())
+        .then(data => data.data);
+    return data;
 }
 
 export default Blog 
