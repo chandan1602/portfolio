@@ -4,5 +4,5 @@
     status = 200
 
 [build]
-  command = "next build && next export"
+  command = "next build"
   publish = "out"
