@@ -1,13 +1,13 @@
 {
-  "/404": "pages/404.html",
+  "/404": "pages/404.js",
   "/_app": "pages/_app.js",
   "/api/hello": "pages/api/hello.js",
   "/blog/[slug]": "pages/blog/[slug].js",
   "/blogs": "pages/blogs.js",
-  "/dashboard": "pages/dashboard.html",
-  "/": "pages/index.html",
-  "/newb": "pages/newb.html",
-  "/signin": "pages/signin.html",
+  "/dashboard": "pages/dashboard.js",
+  "/": "pages/index.js",
+  "/newb": "pages/newb.js",
+  "/signin": "pages/signin.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js"
 }

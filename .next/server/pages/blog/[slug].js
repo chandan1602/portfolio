@@ -5,6 +5,26 @@ exports.id = 492;
 exports.ids = [492];
 exports.modules = {
 
+/***/ 793:
+/***/ ((module) => {
+
+
+let baseURL;
+ false ? 0 : baseURL = "https://ec2-3-110-191-56.ap-south-1.compute.amazonaws.com:3000";
+// export default function getBaseURL () {
+//     let baseURL;
+//     !process.env.NODE_ENV || process.env.NODE_ENV==='development' ? baseURL = process.env.DEV_URL : baseURL = process.env.SERVER_URL;
+//     return baseURL;
+// }
+module.exports = {
+    GET_SLUGS_URL: baseURL + "/slugs",
+    GET_BLOG_BY_SLUG_URL: baseURL + "/blog/",
+    GET_SLUG_TITLE_URL: baseURL + "/slugs-titles"
+};
+
+
+/***/ }),
+
 /***/ 602:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -24,6 +44,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(171);
 /* harmony import */ var _components_Blog_Item__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(20);
+/* harmony import */ var _api_CONSTANTS__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(793);
+/* harmony import */ var _api_CONSTANTS__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_api_CONSTANTS__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -52,6 +75,9 @@ const getStaticProps = async (context)=>{
         var ref;
         const slug = (ref = context.params) === null || ref === void 0 ? void 0 : ref.slug;
         const { data  } = await _api__WEBPACK_IMPORTED_MODULE_4__/* .blogService.getBlogBySlug */ .wS.getBlogBySlug(slug);
+        // let data  = await fetch(CONSTANTS.GET_BLOG_BY_SLUG_URL + slug)
+        //     .then(data => data.json())
+        //     .then(data => data.data);
         let props = {
             props: {
                 data
@@ -68,8 +94,14 @@ const getStaticProps = async (context)=>{
         };
     }
 };
-const getStaticPaths = async ()=>{
-    const { data  } = await _api__WEBPACK_IMPORTED_MODULE_4__/* .blogService.getSlugs */ .wS.getSlugs();
+async function getStaticPaths(context) {
+    // const { data } = await blogService.getSlugs();
+    const url = (_api_CONSTANTS__WEBPACK_IMPORTED_MODULE_6___default().GET_SLUGS_URL);
+    console.log(url);
+    let data = await fetch((_api_CONSTANTS__WEBPACK_IMPORTED_MODULE_6___default().GET_SLUGS_URL));
+    data = await data.json();
+    data = data.data;
+    // .then(data => data.data);
     console.log("Blog slugs : ", data);
     const pathsWithParams = data.map((obj)=>({
             params: {
@@ -81,7 +113,7 @@ const getStaticPaths = async ()=>{
         paths: pathsWithParams,
         fallback: false
     };
-};
+}
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Blog);
 
 

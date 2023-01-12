@@ -6,7 +6,7 @@ export default function handler(req, res) {
   res.status(200).json({ name: 'John Doe' })
 }
 
-export async function getStaticPaths() {
+export async function getAllBlog() {
   const {data, error} = await blogService.getBlogs();
   if(!error) {
     const paths = data.map((blog) => ({

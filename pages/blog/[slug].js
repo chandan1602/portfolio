@@ -4,6 +4,7 @@ import style from './../../styles/blogs.module.css'
 import { useRouter } from 'next/router';
 import { blogService } from '../../api'
 import Item from '../../components/Blog/Item';
+import CONSTANTS from '../../api/CONSTANTS';
 
 const Blog = (props) => {
     const router = useRouter();
@@ -27,6 +28,9 @@ export const getStaticProps = async (context) => {
     try {
         const slug = context.params?.slug;
         const { data } = await blogService.getBlogBySlug(slug);
+        // let data  = await fetch(CONSTANTS.GET_BLOG_BY_SLUG_URL + slug)
+        //     .then(data => data.json())
+        //     .then(data => data.data);
         let props =  { props: { data } };
         return props;
     } catch (error) {
@@ -36,10 +40,13 @@ export const getStaticProps = async (context) => {
     }
 }
 
-export const getStaticPaths = async () => {
-    const { data } = await blogService.getSlugs();
-    console.log("Blog slugs : ", data)
-    const pathsWithParams = data.map((obj) => ({ params: { slug: obj.slug } }))
+export async function getStaticPaths(context) {
+    // const { data } = await blogService.getSlugs();
+    let data = await fetch(CONSTANTS.GET_SLUGS_URL)
+        .then(data => data.json())
+        .then(data => data.data);
+    // console.log("Blog slugs : ", data)
+    const pathsWithParams = data.map((obj) => ({ params: { slug: obj.slug } }));
 
     return {
         paths: pathsWithParams,
