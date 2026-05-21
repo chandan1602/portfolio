@@ -1,6 +1,5 @@
 [build]
   command = "next build"
-  functions = "out_functions"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
