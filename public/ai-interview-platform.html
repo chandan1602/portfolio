@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Career Coach — Case Study | Chandan Bansal</title>
+  <style>
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --accent: #065D45;
+      --accentLight: #0a8060;
+      --accentBg: #e8f5f1;
+      --border: #e5e7eb;
+      --tag: #f3f4f6;
+      --radius: 8px;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    img { max-width: 100%; height: auto; border-radius: var(--radius); display: block; }
+
+    h1, h2, h3, h4 { line-height: 1.3; color: var(--text); }
+    h2 { font-size: 1.55rem; margin-bottom: 0.8rem; }
+    h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+    h4 { font-size: 0.95rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+
+    p { margin-bottom: 0.9rem; color: var(--text); }
+    ul { padding-left: 1.3rem; margin-bottom: 0.9rem; }
+    li { margin-bottom: 0.4rem; color: var(--text); }
+    strong { color: var(--text); }
+
+    table { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin: 1rem 0; }
+    th { background: var(--accentBg); color: var(--accent); text-align: left; padding: 0.6rem 0.8rem; font-weight: 700; border: 1px solid var(--border); }
+    td { padding: 0.55rem 0.8rem; border: 1px solid var(--border); vertical-align: top; }
+    tr:nth-child(even) td { background: #f9fafb; }
+
+    /* ── LAYOUT ── */
+    .page-wrap {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ── SIDEBAR / TOC ── */
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      width: 240px;
+      flex-shrink: 0;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 2rem 1.2rem 2rem 1.4rem;
+    }
+
+    .sidebar-brand {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 1.6rem;
+    }
+
+    .toc-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 0.7rem;
+    }
+
+    .toc-list { list-style: none; padding: 0; margin: 0; }
+    .toc-list li { margin-bottom: 0.1rem; }
+
+    .toc-list a {
+      display: block;
+      padding: 0.35rem 0.7rem;
+      border-radius: 5px;
+      font-size: 0.84rem;
+      color: var(--muted);
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .toc-list a:hover,
+    .toc-list a.active {
+      background: var(--accentBg);
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .toc-divider { border: none; border-top: 1px solid var(--border); margin: 1rem 0; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+    }
+
+    .back-link:hover { color: var(--accent); text-decoration: none; }
+
+    /* ── MAIN CONTENT ── */
+    .main {
+      flex: 1;
+      min-width: 0;
+      padding: 3rem 4rem 5rem 3.5rem;
+      max-width: 860px;
+    }
+
+    /* ── HERO HEADER ── */
+    .case-header {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .case-badge {
+      display: inline-block;
+      background: var(--accentBg);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+
+    .case-title {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 800;
+      margin-bottom: 0.7rem;
+      color: var(--text);
+    }
+
+    .case-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 1.4rem;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .meta-item .label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.15rem;
+    }
+
+    .meta-item .value {
+      font-size: 0.88rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      margin-bottom: 3.5rem;
+      scroll-margin-top: 1.5rem;
+    }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0 0 2rem 0;
+    }
+
+    /* ── CALLOUT / INSIGHT BOX ── */
+    .callout {
+      background: var(--accentBg);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0;
+    }
+
+    .callout p { margin: 0; font-size: 0.95rem; color: var(--accent); font-weight: 500; }
+
+    /* ── PROBLEM CARDS ── */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 1.2rem 0;
+    }
+
+    .problem-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+
+    .problem-num {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--accent);
+      opacity: 0.35;
+      margin-bottom: 0.4rem;
+    }
+
+    .problem-card h3 { font-size: 0.9rem; margin-bottom: 0.4rem; }
+    .problem-card p  { font-size: 0.83rem; color: var(--muted); margin: 0; }
+
+    /* ── PRINCIPLE CARDS ── */
+    .principle-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 1rem;
+      margin: 1.2rem 0;
+    }
+
+    .principle-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+
+    .principle-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .principle-card h3 { font-size: 0.88rem; margin-bottom: 0.3rem; color: var(--accent); }
+    .principle-card p  { font-size: 0.82rem; color: var(--muted); margin: 0; }
+
+    /* ── STAT ROW ── */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 1rem;
+      margin: 1.2rem 0;
+    }
+
+    .stat-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .stat-box .stat-num {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .stat-box .stat-label {
+      font-size: 0.77rem;
+      color: var(--muted);
+    }
+
+    /* ── PHASE CARDS ── */
+    .phase-list { list-style: none; padding: 0; margin: 1rem 0; }
+    .phase-list li {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+      align-items: flex-start;
+    }
+
+    .phase-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .phase-content h3 { font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .phase-content p  { font-size: 0.85rem; color: var(--muted); margin: 0; }
+
+    /* ── RISK CARDS ── */
+    .risk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .risk-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+    }
+
+    .risk-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #b45309;
+      margin-bottom: 0.4rem;
+    }
+
+    .risk-card h3 { font-size: 0.9rem; margin-bottom: 0.35rem; }
+    .risk-mitigation { font-size: 0.82rem; color: var(--accent); font-weight: 500; }
+
+    /* ── FEATURE CARDS ── */
+    .feature-block {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      margin-bottom: 1.2rem;
+      background: var(--surface);
+    }
+
+    .feature-block h3 { font-size: 1rem; margin-bottom: 0.3rem; color: var(--accent); }
+    .feature-block .f-problem { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.6rem; }
+    .feature-block p { font-size: 0.88rem; margin: 0; }
+
+    /* ── ROADMAP ── */
+    .roadmap-section { margin-bottom: 1.2rem; }
+    .roadmap-section h3 { font-size: 0.9rem; color: var(--accent); margin-bottom: 0.4rem; }
+    .roadmap-section ul li { font-size: 0.88rem; }
+
+    /* ── STACK PILLS ── */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 0.8rem;
+      margin: 1rem 0;
+    }
+
+    .stack-item {
+      background: var(--tag);
+      border-radius: var(--radius);
+      padding: 0.7rem 1rem;
+    }
+
+    .stack-item .s-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .stack-item .s-value {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* ── FOOTER ── */
+    .case-footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .case-footer p { color: var(--muted); font-size: 0.88rem; }
+    .case-footer a { color: var(--accent); font-weight: 600; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .sidebar { display: none; }
+      .main { padding: 1.8rem 1.2rem 4rem 1.2rem; }
+      .problem-grid,
+      .principle-grid,
+      .stat-row,
+      .risk-grid,
+      .stack-grid { grid-template-columns: 1fr 1fr; }
+      .meta-row { gap: 0.8rem; }
+    }
+
+    @media (max-width: 480px) {
+      .problem-grid,
+      .principle-grid,
+      .stat-row,
+      .risk-grid,
+      .stack-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-wrap">
+
+  <!-- ══════════════════════════════════════
+       SIDEBAR / TABLE OF CONTENTS
+  ══════════════════════════════════════ -->
+  <aside class="sidebar">
+    <a href="/" class="back-link">← Back to Portfolio</a>
+
+    <div class="sidebar-brand">Chandan Bansal</div>
+
+    <div class="toc-label">Table of Contents</div>
+    <ul class="toc-list">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#problem">Problem Space</a></li>
+      <li><a href="#insight">Key Insight</a></li>
+      <li><a href="#research">User Research</a></li>
+      <li><a href="#vision">Product Vision</a></li>
+      <li><a href="#mvp">MVP Scope</a></li>
+      <li><a href="#features">Feature Deep Dives</a></li>
+      <li><a href="#feedback">Feedback Framework</a></li>
+      <li><a href="#tech">Technology Stack</a></li>
+      <li><a href="#market">Market &amp; Competition</a></li>
+      <li><a href="#gtm">Go-To-Market</a></li>
+      <li><a href="#risks">Risks &amp; Mitigation</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#prototype">Prototype</a></li>
+      <li><a href="#takeaway">Final Takeaway</a></li>
+    </ul>
+
+    <hr class="toc-divider" />
+    <div class="toc-label">Contact</div>
+    <ul class="toc-list">
+      <li><a href="https://www.linkedin.com/in/chandan-bansal-5483a616b" target="_blank">LinkedIn</a></li>
+      <li><a href="mailto:cbansal82@gmail.com">Email</a></li>
+    </ul>
+  </aside>
+
+  <!-- ══════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════ -->
+  <main class="main">
+
+    <!-- HEADER -->
+    <header class="case-header" id="overview">
+      <span class="case-badge">Product Management · 0→1 MVP</span>
+      <h1 class="case-title">AI-Powered Interview Preparation Platform</h1>
+      <p class="case-subtitle">
+        Building interview-readiness infrastructure using AI and real interview data for MBA students.
+      </p>
+
+      <div class="meta-row">
+        <div class="meta-item">
+          <span class="label">Timeline</span>
+          <span class="value">Nov 2025 – Jan 2026</span>
+        </div>
+        <div class="meta-item">
+          <span class="label">Role</span>
+          <span class="value">Product Strategy, Research &amp; MVP Scope</span>
+        </div>
+        <div class="meta-item">
+          <span class="label">Type</span>
+          <span class="value">Team Project · GLIM Chennai</span>
+        </div>
+        <div class="meta-item">
+          <span class="label">Context</span>
+          <span class="value">PGPM — Product Management Specialisation</span>
+        </div>
+      </div>
+
+      <p>
+        Worked across product strategy, design, and AI workflow decisions, owning end-to-end product
+        thinking from problem discovery to MVP execution. Contributed to user research and insight
+        synthesis, and defined MVP scope, priorities, and trade-offs.
+      </p>
+    </header>
+
+    <!-- ── PROBLEM SPACE ── -->
+    <section class="section" id="problem">
+      <h4>01 · Problem Space</h4>
+      <hr class="section-divider" />
+      <h2>A structurally broken preparation ecosystem</h2>
+      <p>
+        Candidates invest significant time and effort in interview preparation through mock interviews,
+        online content, alumni guidance, and AI tools. Despite this, many still walk into interviews
+        underprepared and uncertain — not due to lack of motivation or effort, but because the
+        <strong>current interview preparation ecosystem is structurally broken</strong>.
+      </p>
+
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-num">01</div>
+          <h3>Practice is Slot-Based &amp; Limited</h3>
+          <p>Preparation depends on availability of seniors, alumni, or paid mentors — creating scheduling constraints and inconsistent access.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-num">02</div>
+          <h3>Feedback is Generic &amp; Non-Actionable</h3>
+          <p>Most tools provide high-level feedback like "be more confident" without explaining what went wrong or how to improve.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-num">03</div>
+          <h3>Resume Screening Failures Lack Clarity</h3>
+          <p>Candidates filtered during resume screening receive no structured explanation on role fit, keyword alignment, or expectations.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-num">04</div>
+          <h3>Learning Resets Every Batch</h3>
+          <p>Real interview experiences and insights are lost after each cohort graduates. Each new batch starts from scratch.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── KEY INSIGHT ── -->
+    <section class="section" id="insight">
+      <h4>02 · Key Insight</h4>
+      <hr class="section-divider" />
+      <h2>It's an infrastructure problem, not a content problem</h2>
+      <p>
+        Candidates do not need more articles, videos, or generic mock questions. They need a
+        <strong>system</strong> that provides knowledge continuity across cohorts, always-available
+        practice, role- and company-specific realism, and clear, actionable feedback loops.
+      </p>
+      <div class="callout">
+        <p>
+          How might we enable candidates to prepare effectively for company- and role-specific interviews
+          using real interview experiences, while ensuring 24×7 availability, actionable feedback, and
+          continuity across cohorts?
+        </p>
+      </div>
+    </section>
+
+    <!-- ── USER RESEARCH ── -->
+    <section class="section" id="research">
+      <h4>03 · User Research &amp; Discovery</h4>
+      <hr class="section-divider" />
+      <h2>Research methods &amp; findings</h2>
+      <p>
+        At GLIM Chennai campus, we conducted candidate interviews, campus surveys, competitive
+        teardowns, journey mapping, and drew from first-hand preparation experience.
+        Six users — Abhishek, Rashmi, Sudhanshu, Raghav, Arpita, and Archit — were interviewed in depth.
+      </p>
+
+      <h3>User Interview Summary</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Preparation Behavior</th>
+            <th>Key Pain Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Abhishek</strong></td>
+            <td>Heavy GPT usage; created revision tables comparing answers vs "top 5%" responses; uploaded alumni question banks into GPT; reached out to 15–20 alumni for resume reviews</td>
+            <td>Generic feedback; inconsistent human mock quality; lack of domain &amp; behavioral alignment</td>
+          </tr>
+          <tr>
+            <td><strong>Rashmi</strong></td>
+            <td>Focused on resume prep as first gate; used mock recordings and transcripts; relied on GPT with trial-and-error prompting</td>
+            <td>Lack of one-on-one resume guidance; insufficient guesstimate practice; unclear GPT prompting</td>
+          </tr>
+          <tr>
+            <td><strong>Sudhanshu</strong></td>
+            <td>Comfortable using GPT independently; prefers human interviews; values alumni contact access</td>
+            <td>AI interviews don't replicate real interview pressure; platforms less useful beyond last-minute prep</td>
+          </tr>
+          <tr>
+            <td><strong>Raghav</strong></td>
+            <td>Used GPT for resume modification; received shortlists but couldn't convert; used GPT for mock interviews</td>
+            <td>Insufficient realistic mock interviews; difficulty converting interviews into offers</td>
+          </tr>
+          <tr>
+            <td><strong>Arpita</strong></td>
+            <td>Attended mock interviews; comes from a niche domain (waste treatment, material procurement)</td>
+            <td>Interviewers not domain-aligned; interviews felt generic and less useful</td>
+          </tr>
+          <tr>
+            <td><strong>Archit</strong></td>
+            <td>Used external resume builder; participated in scheduled mock interviews</td>
+            <td>Poor rescheduling communication; feedback limited to hygiene factors; interviewer fatigue</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin-top:1.5rem;">Cross-User Insights</h3>
+      <table>
+        <thead>
+          <tr><th>Theme</th><th>Consolidated Insight</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>AI Usage</strong></td><td>Almost all users use GPT extensively but in unstructured ways; better prompting guidance is clearly needed</td></tr>
+          <tr><td><strong>AI Interviews</strong></td><td>Valued for consistency and availability; especially useful for last-minute or repeat practice</td></tr>
+          <tr><td><strong>Human Interviews</strong></td><td>Strongly preferred for realism and pressure simulation; quality varies widely</td></tr>
+          <tr><td><strong>Feedback Quality</strong></td><td>Generic, high-level feedback is the biggest dissatisfaction point across all platforms</td></tr>
+          <tr><td><strong>Domain Relevance</strong></td><td>Domain mismatch significantly reduces perceived value of mock interviews</td></tr>
+          <tr><td><strong>Scheduling</strong></td><td>Rescheduling issues and interviewer fatigue negatively impact experience</td></tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin-top:1.5rem;">User Needs → Opportunity Areas</h3>
+      <table>
+        <thead>
+          <tr><th>User Need</th><th>Evidence</th><th>Product Opportunity</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Detailed, question-level feedback</td><td>Explicitly demanded by multiple users</td><td>Structured feedback framework per question</td></tr>
+          <tr><td>Resume clarity &amp; JD alignment</td><td>Resume rejections unclear; heavy alumni dependence</td><td>Resume–JD analyzer with gap explanation</td></tr>
+          <tr><td>Domain-specific preparation</td><td>Niche candidates felt underserved</td><td>Role &amp; domain-tagged interview flows</td></tr>
+          <tr><td>Consistent interview practice</td><td>Human mocks are slot-based and variable</td><td>24×7 AI mock interviews</td></tr>
+          <tr><td>Hybrid AI + human approach</td><td>Users want both realism and scalability</td><td>AI-first practice with optional human layer</td></tr>
+          <tr><td>Habit-building during prep</td><td>Guesstimate daily challenge suggested</td><td>Daily challenges with streaks</td></tr>
+          <tr><td>Knowledge continuity</td><td>Willingness to share resumes and experiences</td><td>Interview question repository across batches</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout" style="margin-top:1.2rem;">
+        <p>
+          Users are already putting in significant effort using AI tools, alumni networks, and peer support.
+          The primary gap is <strong>not effort</strong>, but structure, feedback quality, and scalable access.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── PRODUCT VISION ── -->
+    <section class="section" id="vision">
+      <h4>04 · Product Vision &amp; Principles</h4>
+      <hr class="section-divider" />
+      <h2>A student-owned, AI-powered readiness system</h2>
+      <p>
+        Build a system that enables candidates to prepare effectively by being compounding across cohorts,
+        always available, role- and company-specific, and feedback-driven.
+      </p>
+
+      <div class="principle-grid">
+        <div class="principle-card">
+          <div class="principle-icon">🎯</div>
+          <h3>Precision over Generic Prep</h3>
+          <p>Focus on role- and company-specific readiness instead of broad interview content.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-icon">💡</div>
+          <h3>Feedback over Surface Scores</h3>
+          <p>Prioritize actionable insights that change behavior, not just numerical ratings.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-icon">⏰</div>
+          <h3>Availability over Scheduling</h3>
+          <p>Design for preparation that works anytime, not only when humans are available.</p>
+        </div>
+        <div class="principle-card">
+          <div class="principle-icon">🏗️</div>
+          <h3>Infrastructure over Content</h3>
+          <p>Build a system that compounds learning rather than a static collection of materials.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MVP SCOPE ── -->
+    <section class="section" id="mvp">
+      <h4>05 · MVP Scope &amp; Strategy</h4>
+      <hr class="section-divider" />
+      <h2>What's in, what's out, and why</h2>
+
+      <h3>Included in MVP</h3>
+      <table>
+        <thead><tr><th>Feature</th><th>Rationale</th></tr></thead>
+        <tbody>
+          <tr><td><strong>AI Mock Interviews</strong></td><td>Core interview readiness engine — scalable, on-demand practice</td></tr>
+          <tr><td><strong>Resume–JD Analyzer</strong></td><td>Addresses resume screening failures by highlighting role-fit gaps</td></tr>
+          <tr><td><strong>Feedback Dashboard</strong></td><td>Enables candidates to track readiness and improvement over time</td></tr>
+          <tr><td><strong>Question Repository</strong></td><td>Ensures preparation is aligned with real interview expectations</td></tr>
+          <tr><td><strong>Daily Challenges</strong></td><td>Drives preparation consistency and habit formation via streaks</td></tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin-top:1.2rem;">Explicitly Excluded</h3>
+      <table>
+        <thead><tr><th>Feature</th><th>Reason</th></tr></thead>
+        <tbody>
+          <tr><td>Accent / speech coaching</td><td>High complexity with low core impact</td></tr>
+          <tr><td>Full resume rewriting</td><td>Treats symptoms rather than root cause</td></tr>
+          <tr><td>Human mentor scheduling</td><td>Does not scale</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ── FEATURES ── -->
+    <section class="section" id="features">
+      <h4>06 · Feature Deep Dives</h4>
+      <hr class="section-divider" />
+      <h2>Core product experiences</h2>
+
+      <div class="feature-block">
+        <h3>AI Mock Interviews</h3>
+        <p class="f-problem">Problem: Lack of scalable and realistic interview practice</p>
+        <p>
+          AI-led video interviews with immediate structured feedback — available 24×7 without scheduling
+          constraints. Candidates select a target role and company; the system generates contextually
+          relevant questions and evaluates responses on structure, content, and communication clarity.
+          Post-interview, a detailed scorecard breaks down performance per question.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Resume &amp; JD Analyzer</h3>
+        <p class="f-problem">Problem: Resume rejections without clarity on root cause</p>
+        <p>
+          Candidates upload their resume and a target job description. The system highlights gaps in
+          keyword alignment, role-fit, and experience framing — providing a structured breakdown of
+          what to strengthen and why. Tracks improvement over iterations.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Learning Hub &amp; Question Repository</h3>
+        <p class="f-problem">Problem: Practicing generic questions unrelated to target roles</p>
+        <p>
+          A repository of real interview questions tagged by company and role, contributed by students
+          across cohorts. Ends the cycle of each batch starting from scratch. Coupled with curated
+          learning resources relevant to specific domains and companies.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Daily Challenges</h3>
+        <p class="f-problem">Problem: Inconsistent preparation over long placement cycles</p>
+        <p>
+          Bite-sized daily questions — guesstimates, case snippets, or behavioral prompts — with streak
+          tracking to drive habit formation. Keeps candidates in active preparation mode even between
+          intensive mock sessions.
+        </p>
+      </div>
+
+      <div class="feature-block">
+        <h3>Feedback Dashboard</h3>
+        <p class="f-problem">Problem: No visibility into preparation progress over time</p>
+        <p>
+          A central view of all practice activity — mock interview scores, resume analyzer history,
+          daily challenge streaks, and readiness trends. Enables candidates and institutions to track
+          improvement trajectories over the placement season.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── FEEDBACK FRAMEWORK ── -->
+    <section class="section" id="feedback">
+      <h4>07 · Feedback Framework</h4>
+      <hr class="section-divider" />
+      <h2>Structured improvement loops, not surface scores</h2>
+      <p>
+        The core differentiator of the platform is how it delivers feedback. Rather than a single score,
+        each mock interview surfaces a multi-dimensional evaluation:
+      </p>
+      <ul>
+        <li><strong>Content Quality</strong> — relevance, accuracy, and depth of the answer</li>
+        <li><strong>Structure</strong> — STAR / framework usage, logical flow</li>
+        <li><strong>Role Alignment</strong> — how well the response maps to the target role and company</li>
+        <li><strong>Communication Clarity</strong> — conciseness, confidence, and delivery</li>
+        <li><strong>Improvement Suggestions</strong> — specific, actionable next steps per question</li>
+      </ul>
+      <div class="callout">
+        <p>
+          Feedback is benchmarked against historical responses for the same role, so candidates
+          understand not just where they stand but what "good" looks like in context.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── TECHNOLOGY ── -->
+    <section class="section" id="tech">
+      <h4>08 · Technology Stack</h4>
+      <hr class="section-divider" />
+      <h2>Built on a modern, lean stack</h2>
+      <div class="stack-grid">
+        <div class="stack-item">
+          <div class="s-label">Frontend</div>
+          <div class="s-value">React, Vite, TypeScript</div>
+        </div>
+        <div class="stack-item">
+          <div class="s-label">UI Components</div>
+          <div class="s-value">Tailwind CSS, ShadCN, Radix</div>
+        </div>
+        <div class="stack-item">
+          <div class="s-label">AI Models</div>
+          <div class="s-value">Groq (Llama-3), OpenAI Whisper</div>
+        </div>
+        <div class="stack-item">
+          <div class="s-label">Computer Vision</div>
+          <div class="s-value">face-api.js</div>
+        </div>
+        <div class="stack-item">
+          <div class="s-label">Backend</div>
+          <div class="s-value">Node.js, Express</div>
+        </div>
+        <div class="stack-item">
+          <div class="s-label">Storage</div>
+          <div class="s-value">IndexedDB, LocalStorage</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MARKET ── -->
+    <section class="section" id="market">
+      <h4>09 · Market &amp; Competitive Analysis</h4>
+      <hr class="section-divider" />
+      <h2>A real market worth solving for</h2>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <span class="stat-num">3,000+</span>
+          <span class="stat-label">Total B-schools in India</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">2.85L</span>
+          <span class="stat-label">Enrolled MBA students</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">₹5,000</span>
+          <span class="stat-label">Avg prep spend per student/year</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">₹150Cr</span>
+          <span class="stat-label">Estimated SAM (India, annual)</span>
+        </div>
+      </div>
+
+      <h3 style="margin-top:1.5rem;">Competitive Landscape</h3>
+      <table>
+        <thead><tr><th>Category</th><th>Strengths</th><th>Gaps</th></tr></thead>
+        <tbody>
+          <tr><td>Human mock platforms</td><td>Realism</td><td>Poor scalability, inconsistent feedback</td></tr>
+          <tr><td>Resume tools</td><td>Keyword &amp; score-based checks</td><td>One-time utility, weak interview linkage</td></tr>
+          <tr><td>AI interview tools</td><td>Availability, speed</td><td>Static rubrics, shallow feedback</td></tr>
+          <tr><td>Question banks</td><td>Familiarity</td><td>No feedback, no readiness measurement</td></tr>
+          <tr><td>Peer / alumni mocks</td><td>Contextual insight</td><td>Scheduling friction, non-repeatable</td></tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin-top:1.5rem;">Strategic Differentiation</h3>
+      <table>
+        <thead><tr><th>Dimension</th><th>Existing Solutions</th><th>This Platform</th></tr></thead>
+        <tbody>
+          <tr><td>Practice availability</td><td>Slot-based</td><td>24×7 AI-led</td></tr>
+          <tr><td>Feedback</td><td>Generic scores</td><td>Structured improvement loop</td></tr>
+          <tr><td>Role relevance</td><td>Broad</td><td>Role &amp; company specific</td></tr>
+          <tr><td>Continuity</td><td>Resets every batch</td><td>Cohort-level knowledge compounding</td></tr>
+          <tr><td>Focus</td><td>Content &amp; mocks</td><td>Interview readiness infrastructure</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout" style="margin-top:1.2rem;">
+        <p>
+          Most solutions optimise for <strong>either scale or realism</strong>, but not both.
+          Feedback is often generic, disconnected from role expectations, and non-actionable.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── GTM ── -->
+    <section class="section" id="gtm">
+      <h4>10 · Go-To-Market Strategy</h4>
+      <hr class="section-divider" />
+      <h2>Phased rollout starting from a closed cohort</h2>
+      <p>
+        The objective is to validate usefulness, drive habitual usage, and establish the platform as
+        <strong>core interview preparation infrastructure</strong> — not an optional tool.
+      </p>
+
+      <ul class="phase-list">
+        <li>
+          <div class="phase-num">1</div>
+          <div class="phase-content">
+            <h3>Pilot — Product Validation</h3>
+            <p>Launch with one graduating batch to observe usage patterns, refine feedback quality, and identify drop-offs. Entry point: closed cohort at GLIM Chennai.</p>
+          </div>
+        </li>
+        <li>
+          <div class="phase-num">2</div>
+          <div class="phase-content">
+            <h3>Institutional Adoption — Scale Depth</h3>
+            <p>Expand to all batches and integrate into official interview preparation workflows. Introduce institution-level readiness insights and reporting.</p>
+          </div>
+        </li>
+        <li>
+          <div class="phase-num">3</div>
+          <div class="phase-content">
+            <h3>Expansion — Scale Width</h3>
+            <p>Replicate the model across other institutions using the knowledge-compounding infrastructure built in Phase 1–2.</p>
+          </div>
+        </li>
+      </ul>
+
+      <h3>Business Model</h3>
+      <p>
+        <strong>Primary:</strong> Institution-level subscription providing platform access for all
+        students, a central interview knowledge base, and usage &amp; readiness insights for the institution.
+      </p>
+      <p>
+        <strong>Secondary:</strong> Optional student premium tier — advanced mock interviews, deeper
+        feedback views, priority access to new features.
+      </p>
+      <p>
+        This structure lowers acquisition cost through institutional entry, guarantees baseline usage,
+        and ensures knowledge continuity across cohorts.
+      </p>
+    </section>
+
+    <!-- ── RISKS ── -->
+    <section class="section" id="risks">
+      <h4>11 · Risks &amp; Mitigation</h4>
+      <hr class="section-divider" />
+      <h2>Anticipated challenges and how we address them</h2>
+
+      <div class="risk-grid">
+        <div class="risk-card">
+          <div class="risk-label">Risk</div>
+          <h3>Low Interview Data Contribution</h3>
+          <p>Platform depends on real interview data being submitted by users.</p>
+          <p class="risk-mitigation">→ Incentives, anonymity, frictionless submission flow</p>
+        </div>
+        <div class="risk-card">
+          <div class="risk-label">Risk</div>
+          <h3>Low Trust in AI Feedback</h3>
+          <p>Candidates may doubt AI accuracy compared to human reviewers.</p>
+          <p class="risk-mitigation">→ Benchmark feedback against human-reviewed samples</p>
+        </div>
+        <div class="risk-card">
+          <div class="risk-label">Risk</div>
+          <h3>Low Sustained Engagement</h3>
+          <p>Prep fatigue during intensive placement seasons is a real risk.</p>
+          <p class="risk-mitigation">→ Daily challenges and visible progress tracking</p>
+        </div>
+        <div class="risk-card">
+          <div class="risk-label">Risk</div>
+          <h3>Over-Reliance on AI</h3>
+          <p>AI alone doesn't fully simulate real interview pressure.</p>
+          <p class="risk-mitigation">→ Hybrid AI + human positioning from the start</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ROADMAP ── -->
+    <section class="section" id="roadmap">
+      <h4>12 · Future Scope &amp; Roadmap</h4>
+      <hr class="section-divider" />
+      <h2>Where we go after MVP</h2>
+
+      <div class="roadmap-section">
+        <h3>Near-Term (Post-MVP)</h3>
+        <ul>
+          <li>Improve feedback depth using historical performance trends</li>
+          <li>Expand role- and company-specific interview tracks</li>
+          <li>Add structured prompt guidance for AI-assisted preparation</li>
+          <li>Enhance dashboard with readiness comparisons over time</li>
+        </ul>
+      </div>
+
+      <div class="roadmap-section">
+        <h3>Mid-Term Opportunities</h3>
+        <ul>
+          <li>Introduce institution-level insights (anonymised)</li>
+          <li>Enable peer benchmarking using aggregated data</li>
+          <li>Expand question repository through automated tagging</li>
+        </ul>
+      </div>
+
+      <div class="roadmap-section">
+        <h3>Long-Term Vision</h3>
+        <ul>
+          <li>Enable each cohort to start ahead of the previous one</li>
+          <li>Become institutional memory for interview preparation</li>
+          <li>Reduce dependency on informal alumni networks</li>
+          <li>Shift placement prep from ad-hoc to system-driven</li>
+        </ul>
+      </div>
+    </section>
+
+<!-- ── PROTOTYPE SHOWCASE ── -->
+<section class="section" id="prototype">
+  <h4>13 · Product Prototype</h4>
+  <hr class="section-divider" />
+  <h2>Interactive Product Flows & User Experience</h2>
+
+  <p class="section-description">
+    These prototypes demonstrate the core workflows of the AI-powered
+    interview preparation platform, including interview practice,
+    personalised feedback, gamification, learning support, and resume analysis.
+  </p>
+
+  <!-- HOME DASHBOARD -->
+  <div class="prototype-block">
+    <div class="prototype-content">
+      <div class="prototype-text">
+        <h3>Platform Home Experience</h3>
+        <p>
+          Centralised dashboard providing quick access to interview preparation,
+          progress tracking, learning resources, and AI-driven recommendations.
+        </p>
+      </div>
+
+      <div class="prototype-media">
+        <img
+          src="/uploads/prototype.gif"
+          alt="Platform Home Prototype"
+          class="prototype-image"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERVIEW PREP -->
+  <div class="prototype-block">
+    <div class="prototype-content reverse">
+      <div class="prototype-text">
+        <h3>AI Interview Preparation</h3>
+        <p>
+          Simulated interview environment with role-specific questions,
+          adaptive difficulty, and structured preparation workflows.
+        </p>
+      </div>
+
+      <div class="prototype-media">
+        <img
+          src="/uploads/interviewPrep.gif"
+          alt="Interview Preparation Prototype"
+          class="prototype-image"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERVIEW FEEDBACK -->
+  <div class="prototype-block">
+    <div class="prototype-content">
+      <div class="prototype-text">
+        <h3>Post-Interview Feedback Engine</h3>
+        <p>
+          AI-generated evaluation flow highlighting communication,
+          technical depth, confidence, and improvement opportunities
+          after each interview session.
+        </p>
+      </div>
+
+      <div class="prototype-media">
+        <img
+          src="/uploads/interviewFeedback.gif"
+          alt="Interview Feedback Prototype"
+          class="prototype-image"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- GAMIFICATION -->
+  <div class="prototype-block">
+    <div class="prototype-content reverse">
+      <div class="prototype-text">
+        <h3>Gamified Learning Journey</h3>
+        <p>
+          Motivation-driven preparation system using streaks,
+          milestones, progress indicators, and achievement-based engagement.
+        </p>
+      </div>
+
+      <div class="prototype-media">
+        <img
+          src="/uploads/gamification.gif"
+          alt="Gamification Prototype"
+          class="prototype-image"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- LEARNING HUB -->
+  <div class="prototype-block">
+    <div class="prototype-content">
+      <div class="prototype-text">
+        <h3>Learning Hub</h3>
+        <p>
+          Structured repository of preparation resources, curated learning paths,
+          and interview-focused study material for continuous improvement.
+        </p>
+      </div>
+
+      <div class="prototype-media">
+        <img
+          src="/uploads/learningHub.gif"
+          alt="Learning Hub Prototype"
+          class="prototype-image"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- RESUME FEEDBACK -->
+  <div class="prototype-block">
+    <div class="prototype-content reverse">
+      <div class="prototype-text">
+        <h3>AI Resume Feedback</h3>
+        <p>
+          Resume analysis workflow providing personalised suggestions
+          on structure, keyword optimisation, clarity, and role alignment.
+        </p>
+      </div>
+
+      <div class="prototype-media">
+        <img
+          src="/uploads/ResumeFeedback.png"
+          alt="Resume Feedback Prototype"
+          class="prototype-image"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- ── TAKEAWAY ── -->
+    <section class="section" id="takeaway">
+      <h4>14 · Final Takeaway</h4>
+      <hr class="section-divider" />
+      <h2>What this project reflects</h2>
+      <p>
+        This project reflects how I approach 0→1 product building: <strong>problem-first thinking</strong>,
+        user-validated decisions, disciplined MVP scoping, and systems that scale beyond individual users.
+        The hardest part wasn't the AI — it was resisting the temptation to build everything and instead
+        focusing relentlessly on the one loop that mattered most: candidates getting better between each
+        practice session.
+      </p>
+      <div class="callout">
+        <p>
+          Interview preparation is not a content problem. It is an infrastructure problem.
+          We built infrastructure.
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="case-footer">
+      <p>Built by <strong>Chandan Bansal and team</strong> &nbsp;|&nbsp; PGPM · Great Lakes Institute of Management</p>
+      <p style="margin-top:0.5rem;">
+        <a href="mailto:cbansal82@gmail.com">cbansal82@gmail.com</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.linkedin.com/in/chandan-bansal-5483a616b" target="_blank">LinkedIn</a>
+        &nbsp;·&nbsp;
+        <a href="/">← Back to Portfolio</a>
+      </p>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  // Highlight active TOC item on scroll
+  const sections = document.querySelectorAll('.section, .case-header');
+  const tocLinks = document.querySelectorAll('.toc-list a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        tocLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(s => { if (s.id) observer.observe(s); });
+</script>
+<style>
+  /* ───────── PROTOTYPE SECTION ───────── */
+
+.section-description {
+  margin-bottom: 2rem;
+  color: #b0b0b0;
+  line-height: 1.7;
+  max-width: 850px;
+}
+
+.prototype-block {
+  margin-bottom: 4rem;
+}
+
+.prototype-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.prototype-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.prototype-text {
+  flex: 1;
+}
+
+.prototype-text h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.prototype-text p {
+  line-height: 1.8;
+  color: #b0b0b0;
+}
+
+.prototype-media {
+  flex: 1;
+}
+
+.prototype-image {
+  width: 100%;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.prototype-image:hover {
+  transform: translateY(-4px);
+}
+
+/* ───────── MOBILE RESPONSIVENESS ───────── */
+
+@media (max-width: 768px) {
+  .prototype-content,
+  .prototype-content.reverse {
+    flex-direction: column;
+  }
+
+  .prototype-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .prototype-block {
+    margin-bottom: 3rem;
+  }
+}
+</style>
+</body>
+</html>

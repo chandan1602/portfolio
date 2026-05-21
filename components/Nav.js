@@ -50,10 +50,13 @@ export const Nav = () => {
                             <a className="nav-link" style={{cursor: 'pointer'}} onClick={() => redirectToPage('/#skills')}>Skills</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" style={{cursor: 'pointer'}} onClick={() => redirectToPage('/#internships')}>Internships</a>
+                            <a className="nav-link" style={{cursor: 'pointer'}} onClick={() => redirectToPage('/#workex')}>Work-Experience</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" style={{cursor: 'pointer'}} onClick={() => redirectToPage('/#projects')}>Projects</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" style={{cursor: 'pointer'}} onClick={() => redirectToPage('/#internships')}>Internships</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" style={{cursor: 'pointer'}} onClick={() => redirectToPage('/blogs')}>Blogs</a>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 // import axios from 'axios'
 import { Form, Button, FormGroup, FormControl, FormLabel, Spinner, Alert } from 'react-bootstrap'
 import styles from './../styles/dash.module.css'
+import Link from 'next/link'
 import { authService } from '../api'
 import { useRouter, withRouter } from 'next/router'
 import LocalStorageKeys from '../util/constants/LocalStorageKeys'
@@ -16,10 +17,14 @@ const Dashboard = () => {
         return <div></div>;
     }, [])
 
-    useEffect(async () => {
-        if(pageLoaded===false) {
-            const {error} = await authService.validate(localStorage.getItem(LocalStorageKeys.JSON_WEB_TOKEN));
-            if(error) {
+    useEffect(() => {
+        validateUser();
+    }, [pageLoaded])
+
+    const validateUser = async () => {
+        if (pageLoaded === false) {
+            const { error } = await authService.validate(localStorage.getItem(LocalStorageKeys.JSON_WEB_TOKEN));
+            if (error) {
                 alert("You must be logged in");
                 router.push("/signin");
                 return;
@@ -27,9 +32,9 @@ const Dashboard = () => {
             setToken(router.query.token);
             setIsLoading(false)
             setPageLoaded(true)
+            return;
         }
-        
-    }, [pageLoaded])
+    }
 
 
     if (isLoading) return (
@@ -43,6 +48,7 @@ const Dashboard = () => {
     }
 
     const handleCreateBlog = () => {
+        console.log('Blog Now button clicked');
         router.push({
             pathname: "/newb"
         })
@@ -59,7 +65,9 @@ const Dashboard = () => {
                         <hr className="my-4" />
                         <p>Time to be productive Chandan</p>
                         <p className="lead">
-                            <a className="btn btn-primary btn-lg" style={{"color" : "white"}} onClick={handleCreateBlog} role="button">Blog Now</a>
+                            <button className="btn btn-primary btn-lg" style={{ color: "white" }} role="button" onClick={handleCreateBlog}>
+                                Blog Now
+                            </button>
                         </p>
                     </div>
                 </div>
@@ -70,7 +78,7 @@ const Dashboard = () => {
                         <hr className="my-4" />
                         <p>Note in our own personal space. Beats all!!</p>
                         <p className="lead">
-                            <a className="btn btn-primary btn-lg" style={{"color" : "white"}} onClick={handleCreateNote} role="button">Write a Note</a>
+                            <a className="btn btn-primary btn-lg" style={{ "color": "white" }} onClick={handleCreateNote} role="button">Write a Note</a>
                         </p>
                     </div>
                 </div>

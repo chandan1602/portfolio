@@ -3,12 +3,19 @@ import React, { useEffect, useState } from 'react'
 import { Form, Button, FormGroup, FormControl, FormLabel, Spinner, Alert } from 'react-bootstrap'
 import styles from './../styles/dash.module.css'
 import { authService, blogService } from '../api'
-import { useRouter, withRouter } from 'next/router'
-import RichTextEditor from '../components/RichTextEditor/Editor'
+import { useRouter } from 'next/router'
+// import RichTextEditor from '../components/RichTextEditor/Editor'
 import { EditorState } from 'draft-js';
 import { convertToHTML } from 'draft-convert'
 import LocalStorageKeys from '../util/constants/LocalStorageKeys'
 import { Header } from '../components/Header'
+
+import dynamic from 'next/dynamic'
+
+const RichTextEditor = dynamic(
+  () => import('../components/RichTextEditor/Editor'),
+  { ssr: false } // This forces it to only load in the browser
+)
 
 const NewB = () => {
     const router = useRouter();
@@ -18,11 +25,13 @@ const NewB = () => {
     const [title, setTitle] = useState("");
 
     const onSubmit = async (e) => {
+        console.log('onSubmit called', { title, token, blog: localStorage.getItem(LocalStorageKeys.BLOG) });
         if (title !== "") {
             let res = prompt("Proceed with the Blog? (yes/y)");
             if (res === "yes" || res === "y") {
                 try {
                     setIsLoading(true);
+                    console.log('Posting blog', { title, token, blog: localStorage.getItem(LocalStorageKeys.BLOG) });
                     const { error } = await blogService
                         .postBlog({ 
                             description: localStorage.getItem(LocalStorageKeys.BLOG), 
@@ -36,17 +45,22 @@ const NewB = () => {
                 } catch (error) {
                     alert("Request Failed. Probable Reason : Network Problem!");
                     setIsLoading(false);
+                    console.error('Blog post error', error);
                 }
             }
         }
     }
 
-    useEffect(async () => {
-        setPageLoaded(false);
-        return <div></div>;
-    }, []);
+useEffect(() => {
+    setPageLoaded(false);
+}, []);
 
-    useEffect(async () => {
+
+    useEffect(() => {
+        validateUser();
+    }, [pageLoaded])
+
+    const validateUser = async () => {
         if (pageLoaded === false) {
             const { error } = await authService.validate(localStorage.getItem(LocalStorageKeys.JSON_WEB_TOKEN));
             if (error) {
@@ -58,8 +72,7 @@ const NewB = () => {
             setIsLoading(false)
             setPageLoaded(true)
         }
-
-    }, [pageLoaded])
+    }
 
     const titleHandler = (e) => {
         setTitle(e.target.value);

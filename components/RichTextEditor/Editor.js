@@ -27,7 +27,7 @@ class RichTextEditor extends React.Component {
            editorState,
            typing: false,
            typingTimeout: setTimeout(function () {
-            localStorage.setItem(LocalStorageKeys.BLOG, convertToHTML(this.state.editorState.getCurrentContent()));
+            localStorage.setItem(LocalStorageKeys.BLOG, convertToHTML(self.state.editorState.getCurrentContent()));
              }, Config.TYPING_TIMEOUT_FOR_BLOG)
         });
 
