@@ -77,7 +77,7 @@ export default function Home() {
                   prototyping to build customer-centric solutions.
                 </p>
                 <div className="heroCTAs">
-                  <a className="btn heroBtn" href="/assets/Chandan_Bansal_Resume.pdf" target="_blank">
+                  <a className="btn heroBtn" href="https://drive.google.com/file/d/1Muo4AJyzbeEgADN7N-AbtS1htQle23RW/view?usp=sharing" target="_blank">
                     Resume
                   </a>
                   <a className="btn heroBtn heroBtn--outline" href="#projects">
